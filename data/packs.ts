@@ -1,0 +1,188 @@
+import type { Pack } from "@/types";
+
+export const packs: Pack[] = [
+  {
+    slug: "cuisine-essentielle",
+    name: "Pack Cuisine Essentielle",
+    shortName: "Cuisine Essentielle",
+    tagline: "Le pack star pour démarrer",
+    price: 99,
+    compareAtPrice: 149,
+    itemsCount: 5,
+    description:
+      "Le pack indispensable pour équiper votre cuisine au quotidien. Papier aluminium, film alimentaire, papier cuisson, papier absorbant et sacs de congélation : tout ce qu'il faut pour cuisiner, conserver et emballer sans jamais tomber en rupture.",
+    contents: [
+      { name: "Papier aluminium 30 m", icon: "foil" },
+      { name: "Film alimentaire 30 m", icon: "wrap" },
+      { name: "Papier cuisson", icon: "parchment" },
+      { name: "Papier absorbant (2 rouleaux)", icon: "paperTowel" },
+      { name: "Sacs de congélation (50 pièces)", icon: "freezerBag" },
+    ],
+    advantages: [
+      {
+        title: "Le plus complet",
+        description: "5 produits essentiels réunis pour couvrir tous vos besoins de base en cuisine.",
+        icon: "package",
+      },
+      {
+        title: "Qualité durable",
+        description: "Des matériaux résistants pensés pour un usage quotidien intensif.",
+        icon: "shield",
+      },
+      {
+        title: "Prix économique",
+        description: "Moins cher que d'acheter chaque produit séparément.",
+        icon: "savings",
+      },
+    ],
+    featured: true,
+  },
+  {
+    slug: "pack-rangement",
+    name: "Pack Rangement",
+    shortName: "Rangement",
+    tagline: "Organisez votre cuisine sans effort",
+    price: 119,
+    compareAtPrice: 169,
+    itemsCount: 5,
+    description:
+      "Reprenez le contrôle de vos placards et de votre réfrigérateur. Film alimentaire, papier aluminium, sacs zip, boîtes réutilisables et étiquettes autocollantes pour une cuisine parfaitement organisée et des aliments conservés plus longtemps.",
+    contents: [
+      { name: "Film alimentaire", icon: "wrap" },
+      { name: "Papier aluminium", icon: "foil" },
+      { name: "Sacs Zip alimentaires", icon: "zipBag" },
+      { name: "Boîtes alimentaires réutilisables", icon: "container" },
+      { name: "Étiquettes autocollantes", icon: "label" },
+    ],
+    advantages: [
+      {
+        title: "Cuisine organisée",
+        description: "Des boîtes réutilisables et des étiquettes pour tout retrouver en un coup d'œil.",
+        icon: "package",
+      },
+      {
+        title: "Zéro gaspillage",
+        description: "Conservez vos aliments plus longtemps grâce à un rangement optimal.",
+        icon: "leaf",
+      },
+      {
+        title: "Réutilisable",
+        description: "Des boîtes solides que vous utiliserez pendant des mois.",
+        icon: "shield",
+      },
+    ],
+  },
+  {
+    slug: "pack-bbq-cuisine",
+    name: "Pack BBQ & Cuisine",
+    shortName: "BBQ & Cuisine",
+    tagline: "Parfait pour les grillades et la cuisson",
+    price: 109,
+    compareAtPrice: 159,
+    itemsCount: 5,
+    description:
+      "Le compagnon idéal des barbecues et des sessions cuisine entre amis ou en famille. Papier aluminium renforcé, papier cuisson, film alimentaire, gants jetables et essuie-tout pour cuisiner et nettoyer sans prise de tête.",
+    contents: [
+      { name: "Papier aluminium renforcé", icon: "foil" },
+      { name: "Papier cuisson", icon: "parchment" },
+      { name: "Film alimentaire", icon: "wrap" },
+      { name: "Gants jetables", icon: "gloves" },
+      { name: "Rouleau essuie-tout", icon: "paperTowel" },
+    ],
+    advantages: [
+      {
+        title: "Résistant à la chaleur",
+        description: "Aluminium renforcé conçu pour la cuisson et le barbecue.",
+        icon: "shield",
+      },
+      {
+        title: "Hygiène assurée",
+        description: "Gants jetables inclus pour manipuler viandes et braises en toute sécurité.",
+        icon: "sparkles",
+      },
+      {
+        title: "Prêt à l'emploi",
+        description: "Tout le nécessaire pour vos grillades dans un seul pack.",
+        icon: "package",
+      },
+    ],
+  },
+  {
+    slug: "pack-congelation",
+    name: "Pack Congélation",
+    shortName: "Congélation",
+    tagline: "Conservez plus, gaspillez moins",
+    price: 89,
+    compareAtPrice: 129,
+    itemsCount: 5,
+    description:
+      "Congelez et organisez vos aliments comme un pro. Papier aluminium, film alimentaire, sacs de congélation, clips de fermeture et étiquettes alimentaires pour un congélateur toujours bien rangé.",
+    contents: [
+      { name: "Papier aluminium", icon: "foil" },
+      { name: "Film alimentaire", icon: "wrap" },
+      { name: "Sacs congélation", icon: "freezerBag" },
+      { name: "Clips de fermeture", icon: "clip" },
+      { name: "Étiquettes alimentaires", icon: "label" },
+    ],
+    advantages: [
+      {
+        title: "Conservation longue durée",
+        description: "Gardez vos aliments frais plus longtemps au congélateur.",
+        icon: "shield",
+      },
+      {
+        title: "Prix le plus accessible",
+        description: "Le pack le plus économique de la gamme Bayti Pack.",
+        icon: "savings",
+      },
+      {
+        title: "Facile à organiser",
+        description: "Étiquettes et clips pour un congélateur toujours clair.",
+        icon: "package",
+      },
+    ],
+  },
+  {
+    slug: "pack-economie-maison",
+    name: "Pack Économie Maison",
+    shortName: "Économie Maison",
+    tagline: "L'essentiel pour toute la maison",
+    price: 99,
+    compareAtPrice: 139,
+    itemsCount: 5,
+    description:
+      "Un pack complet pour l'entretien et la cuisine du quotidien. Papier aluminium, film alimentaire, essuie-tout, papier cuisson et éponge double face : la maison bien tenue sans multiplier les achats.",
+    contents: [
+      { name: "Papier aluminium", icon: "foil" },
+      { name: "Film alimentaire", icon: "wrap" },
+      { name: "Rouleau essuie-tout", icon: "paperTowel" },
+      { name: "Papier cuisson", icon: "parchment" },
+      { name: "Éponge double face", icon: "sponge" },
+    ],
+    advantages: [
+      {
+        title: "Polyvalent",
+        description: "Utile en cuisine comme pour l'entretien de toute la maison.",
+        icon: "package",
+      },
+      {
+        title: "Économique",
+        description: "Un excellent rapport qualité-prix pour un usage quotidien.",
+        icon: "savings",
+      },
+      {
+        title: "Toujours utile",
+        description: "Des produits que vous utilisez chaque semaine, jamais en trop.",
+        icon: "leaf",
+      },
+    ],
+  },
+];
+
+export function getPackBySlug(slug: string): Pack | undefined {
+  return packs.find((p) => p.slug === slug);
+}
+
+export function getOtherPacks(slug: string): Pack[] {
+  return packs.filter((p) => p.slug !== slug);
+}
