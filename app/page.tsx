@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import Hero from "@/components/home/Hero";
 import WhyUs from "@/components/home/WhyUs";
-import PacksSection from "@/components/home/PacksSection";
+import PacksCarousel from "@/components/home/PacksCarousel";
 import HowItWorks from "@/components/home/HowItWorks";
 import Testimonials from "@/components/home/Testimonials";
 import FAQ from "@/components/home/FAQ";
@@ -18,7 +18,7 @@ export default function HomePage() {
     <>
       <Hero />
       <WhyUs />
-      <PacksSection />
+      <PacksCarousel />
       <HowItWorks />
       <Testimonials />
       <FAQ />
