@@ -1,12 +1,10 @@
 "use client";
 
 import { useCallback, useEffect, useRef, useState } from "react";
-import Link from "next/link";
 import { AnimatePresence, motion } from "framer-motion";
-import { ArrowRight, ChevronLeft, ChevronRight } from "lucide-react";
+import { ChevronLeft, ChevronRight } from "lucide-react";
 import { packs } from "@/data/packs";
 import PackVisual from "@/components/shared/PackVisual";
-import { formatDH } from "@/lib/utils";
 
 const AUTOPLAY_DELAY = 4500;
 
@@ -64,25 +62,6 @@ export default function HeroPacksSlider() {
             }}
           >
             <PackVisual pack={pack} />
-
-            <div className="mt-4 flex items-end justify-between gap-3">
-              <div>
-                <p className="font-semibold text-ink">{pack.shortName}</p>
-                <p className="text-xs text-neutral-400">{pack.itemsCount} produits inclus</p>
-              </div>
-              <div className="text-right">
-                <p className="text-lg font-bold text-brand-dark">{formatDH(pack.price)}</p>
-                <p className="text-xs text-neutral-400 line-through">{formatDH(pack.compareAtPrice)}</p>
-              </div>
-            </div>
-
-            <Link
-              href={`/packs/${pack.slug}`}
-              className="mt-4 flex w-full items-center justify-center gap-2 rounded-full bg-ink py-3 text-sm font-semibold text-white transition-colors hover:bg-brand"
-            >
-              Voir le pack
-              <ArrowRight className="h-4 w-4" />
-            </Link>
           </motion.div>
         </AnimatePresence>
       </div>
@@ -90,14 +69,14 @@ export default function HeroPacksSlider() {
       <button
         aria-label="Pack précédent"
         onClick={prev}
-        className="absolute left-2 top-[35%] flex -translate-y-1/2 items-center justify-center rounded-full border border-black/10 bg-white/90 p-2 shadow-card transition-colors hover:bg-brand hover:text-white"
+        className="absolute left-2 top-1/2 flex -translate-y-1/2 items-center justify-center rounded-full border border-black/10 bg-white/90 p-2 shadow-card transition-colors hover:bg-brand hover:text-white"
       >
         <ChevronLeft className="h-4 w-4" />
       </button>
       <button
         aria-label="Pack suivant"
         onClick={next}
-        className="absolute right-2 top-[35%] flex -translate-y-1/2 items-center justify-center rounded-full border border-black/10 bg-white/90 p-2 shadow-card transition-colors hover:bg-brand hover:text-white"
+        className="absolute right-2 top-1/2 flex -translate-y-1/2 items-center justify-center rounded-full border border-black/10 bg-white/90 p-2 shadow-card transition-colors hover:bg-brand hover:text-white"
       >
         <ChevronRight className="h-4 w-4" />
       </button>
