@@ -3,12 +3,9 @@
 import Link from "next/link";
 import { motion } from "framer-motion";
 import { ArrowRight, ShoppingBag, PackageCheck, Sparkles } from "lucide-react";
-import { packs } from "@/data/packs";
-import { formatDH } from "@/lib/utils";
+import HeroPacksSlider from "@/components/home/HeroPacksSlider";
 
 export default function Hero() {
-  const showcase = packs.slice(0, 3);
-
   return (
     <section className="relative overflow-hidden bg-gradient-to-b from-brand-light/60 to-white">
       <div className="container-content grid items-center gap-12 py-16 sm:py-20 lg:grid-cols-2 lg:py-28">
@@ -71,31 +68,13 @@ export default function Hero() {
           </motion.div>
         </div>
 
-        <div className="relative mx-auto grid w-full max-w-md grid-cols-2 gap-4 sm:max-w-lg">
-          {showcase.map((pack, i) => (
-            <motion.div
-              key={pack.slug}
-              initial={{ opacity: 0, scale: 0.9, y: 20 }}
-              animate={{ opacity: 1, scale: 1, y: 0 }}
-              transition={{ duration: 0.6, delay: 0.2 + i * 0.15 }}
-              className={
-                i === 2
-                  ? "col-span-2 rounded-xl2 border border-black/5 bg-white p-4 shadow-lift"
-                  : "rounded-xl2 border border-black/5 bg-white p-4 shadow-card"
-              }
-            >
-              <div className="aspect-[4/3] w-full overflow-hidden rounded-xl bg-gradient-to-br from-brand-light to-white p-4">
-                <div className="flex h-full items-center justify-center">
-                  <div className="flex h-14 w-14 items-center justify-center rounded-xl bg-white shadow-soft">
-                    <PackageCheck className="h-7 w-7 text-brand" strokeWidth={1.5} />
-                  </div>
-                </div>
-              </div>
-              <p className="mt-3 truncate text-sm font-semibold text-ink">{pack.shortName}</p>
-              <p className="text-sm font-bold text-brand-dark">{formatDH(pack.price)}</p>
-            </motion.div>
-          ))}
-        </div>
+        <motion.div
+          initial={{ opacity: 0, scale: 0.95, y: 20 }}
+          animate={{ opacity: 1, scale: 1, y: 0 }}
+          transition={{ duration: 0.6, delay: 0.2 }}
+        >
+          <HeroPacksSlider />
+        </motion.div>
       </div>
     </section>
   );
