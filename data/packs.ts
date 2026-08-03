@@ -147,6 +147,8 @@ export const packs: Pack[] = [
         icon: "package",
       },
     ],
+    heroImage:
+      "https://res.cloudinary.com/diptsoc4h/image/upload/v1785762799/ChatGPT_Image_3_ao%C3%BBt_2026_14_13_03_fogtrb.png",
   },
   {
     slug: "pack-economie-maison",
