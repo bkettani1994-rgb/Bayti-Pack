@@ -110,6 +110,8 @@ export const packs: Pack[] = [
         icon: "package",
       },
     ],
+    heroImage:
+      "https://res.cloudinary.com/diptsoc4h/image/upload/v1785752168/ChatGPT_Image_3_ao%C3%BBt_2026_10_54_41_enndjh.png",
   },
   {
     slug: "pack-congelation",
