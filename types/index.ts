@@ -42,4 +42,5 @@ export type Pack = {
   contents: PackItem[];
   advantages: Advantage[];
   featured?: boolean;
+  heroImage?: string;
 };

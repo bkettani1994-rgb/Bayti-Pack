@@ -36,6 +36,8 @@ export const packs: Pack[] = [
       },
     ],
     featured: true,
+    heroImage:
+      "https://res.cloudinary.com/diptsoc4h/image/upload/v1785750810/ChatGPT_Image_3_ao%C3%BBt_2026_10_46_40_tsbjed.png",
   },
   {
     slug: "pack-rangement",
@@ -71,6 +73,8 @@ export const packs: Pack[] = [
         icon: "shield",
       },
     ],
+    heroImage:
+      "https://res.cloudinary.com/diptsoc4h/image/upload/v1785750810/ChatGPT_Image_3_ao%C3%BBt_2026_10_53_18_osbxpf.png",
   },
   {
     slug: "pack-bbq-cuisine",

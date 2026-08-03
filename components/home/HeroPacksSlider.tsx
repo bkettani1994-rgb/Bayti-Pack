@@ -1,6 +1,7 @@
 "use client";
 
 import { useCallback, useEffect, useRef, useState } from "react";
+import Image from "next/image";
 import { AnimatePresence, motion } from "framer-motion";
 import { ChevronLeft, ChevronRight, PackageCheck } from "lucide-react";
 import { packs } from "@/data/packs";
@@ -73,23 +74,36 @@ export default function HeroPacksSlider() {
             }}
             className="absolute inset-0"
           >
-            <div className="absolute inset-0 flex items-center justify-center">
-              <div className="flex h-20 w-20 items-center justify-center rounded-2xl bg-white shadow-card sm:h-28 sm:w-28">
-                <PackageCheck className="h-10 w-10 text-brand sm:h-14 sm:w-14" strokeWidth={1.5} />
-              </div>
-            </div>
+            {pack.heroImage ? (
+              <Image
+                src={pack.heroImage}
+                alt={pack.name}
+                fill
+                priority={index === 0}
+                sizes="100vw"
+                className="object-cover"
+              />
+            ) : (
+              <>
+                <div className="absolute inset-0 flex items-center justify-center">
+                  <div className="flex h-20 w-20 items-center justify-center rounded-2xl bg-white shadow-card sm:h-28 sm:w-28">
+                    <PackageCheck className="h-10 w-10 text-brand sm:h-14 sm:w-14" strokeWidth={1.5} />
+                  </div>
+                </div>
 
-            {pack.contents.slice(0, 4).map((item, i) => (
-              <div
-                key={item.name}
-                className={cn(
-                  "absolute flex items-center gap-1.5 rounded-xl bg-white/95 px-2.5 py-1.5 shadow-soft",
-                  chipPositions[i]
-                )}
-              >
-                <AppIcon icon={item.icon} className="h-4 w-4 text-brand-dark" />
-              </div>
-            ))}
+                {pack.contents.slice(0, 4).map((item, i) => (
+                  <div
+                    key={item.name}
+                    className={cn(
+                      "absolute flex items-center gap-1.5 rounded-xl bg-white/95 px-2.5 py-1.5 shadow-soft",
+                      chipPositions[i]
+                    )}
+                  >
+                    <AppIcon icon={item.icon} className="h-4 w-4 text-brand-dark" />
+                  </div>
+                ))}
+              </>
+            )}
 
             {pack.featured && (
               <span className="absolute left-6 top-6 rounded-full bg-ink px-3 py-1 text-xs font-semibold text-white sm:left-10 sm:top-10">
