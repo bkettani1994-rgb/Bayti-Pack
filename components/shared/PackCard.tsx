@@ -27,11 +27,11 @@ export default function PackCard({
       </Link>
 
       <div className="flex flex-1 flex-col p-5">
-        <h3 className="text-lg font-semibold text-ink">{pack.name}</h3>
-        <p className="mt-1 text-sm text-neutral-500">{pack.itemsCount} produits inclus</p>
+        <h3 className="text-base font-semibold text-ink sm:text-lg">{pack.name}</h3>
+        <p className="mt-1 text-xs text-neutral-500 sm:text-sm">{pack.itemsCount} produits inclus</p>
 
         <div className="mt-3 flex flex-wrap items-baseline gap-x-2 gap-y-0.5">
-          <span className="text-lg font-bold text-brand-dark sm:text-xl">{formatDH(pack.price)}</span>
+          <span className="text-base font-bold text-brand-dark sm:text-lg">{formatDH(pack.price)}</span>
           <span className="text-xs text-neutral-400 line-through">{formatDH(pack.compareAtPrice)}</span>
         </div>
 
