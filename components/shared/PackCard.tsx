@@ -14,8 +14,8 @@ export default function PackCard({ pack, ctaLabel = "Voir le pack" }: { pack: Pa
       transition={{ type: "spring", stiffness: 300, damping: 20 }}
       className="group flex flex-col overflow-hidden rounded-xl2 border border-black/5 bg-white shadow-soft transition-shadow duration-300 hover:shadow-lift"
     >
-      <Link href={`/packs/${pack.slug}`} className="p-4 pb-0">
-        <PackVisual pack={pack} />
+      <Link href={`/packs/${pack.slug}`}>
+        <PackVisual pack={pack} className="rounded-none border-0" />
       </Link>
 
       <div className="flex flex-1 flex-col p-5">
