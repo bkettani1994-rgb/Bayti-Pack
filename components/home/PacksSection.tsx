@@ -13,7 +13,7 @@ export default function PacksSection() {
           <p className="section-subtitle">5 packs pensés pour simplifier votre quotidien.</p>
         </Reveal>
 
-        <div className="mt-12 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
+        <div className="mt-12 grid grid-cols-2 gap-4 sm:gap-6 lg:grid-cols-3">
           {packs.map((pack, i) => (
             <Reveal key={pack.slug} delay={i * 0.06}>
               <PackCard pack={pack} />

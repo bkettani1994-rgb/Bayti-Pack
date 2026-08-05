@@ -17,8 +17,8 @@ export default function HomePage() {
   return (
     <>
       <Hero />
-      <WhyUs />
       <PacksSection />
+      <WhyUs />
       <HowItWorks />
       <Testimonials />
       <FAQ />

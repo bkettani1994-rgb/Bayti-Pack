@@ -22,9 +22,9 @@ export default function PackCard({ pack, ctaLabel = "Voir le pack" }: { pack: Pa
         <h3 className="text-lg font-semibold text-ink">{pack.name}</h3>
         <p className="mt-1 text-sm text-neutral-500">{pack.itemsCount} produits inclus</p>
 
-        <div className="mt-3 flex items-baseline gap-2">
-          <span className="text-2xl font-bold text-brand-dark">{formatDH(pack.price)}</span>
-          <span className="text-sm text-neutral-400 line-through">{formatDH(pack.compareAtPrice)}</span>
+        <div className="mt-3 flex flex-wrap items-baseline gap-x-2 gap-y-0.5">
+          <span className="text-xl font-bold text-brand-dark sm:text-2xl">{formatDH(pack.price)}</span>
+          <span className="text-xs text-neutral-400 line-through sm:text-sm">{formatDH(pack.compareAtPrice)}</span>
         </div>
 
         <Link
