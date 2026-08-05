@@ -51,7 +51,8 @@ export const packs: Pack[] = [
     price: 119,
     compareAtPrice: 169,
     itemsCount: 5,
-    thumbnail: PREVIEW_THUMBNAIL,
+    thumbnail:
+      "https://res.cloudinary.com/diptsoc4h/image/upload/v1785940797/ChatGPT_Image_5_ao%C3%BBt_2026_15_38_44_bjrppo.png",
     description:
       "Reprenez le contrôle de vos placards et de votre réfrigérateur. Film alimentaire, papier aluminium, sacs zip, boîtes réutilisables et étiquettes autocollantes pour une cuisine parfaitement organisée et des aliments conservés plus longtemps.",
     contents: [
@@ -89,7 +90,8 @@ export const packs: Pack[] = [
     price: 109,
     compareAtPrice: 159,
     itemsCount: 5,
-    thumbnail: PREVIEW_THUMBNAIL,
+    thumbnail:
+      "https://res.cloudinary.com/diptsoc4h/image/upload/v1785940937/ChatGPT_Image_5_ao%C3%BBt_2026_15_41_50_ihplau.png",
     description:
       "Le compagnon idéal des barbecues et des sessions cuisine entre amis ou en famille. Papier aluminium renforcé, papier cuisson, film alimentaire, gants jetables et essuie-tout pour cuisiner et nettoyer sans prise de tête.",
     contents: [
@@ -127,7 +129,8 @@ export const packs: Pack[] = [
     price: 89,
     compareAtPrice: 129,
     itemsCount: 5,
-    thumbnail: PREVIEW_THUMBNAIL,
+    thumbnail:
+      "https://res.cloudinary.com/diptsoc4h/image/upload/v1785941112/ChatGPT_Image_5_ao%C3%BBt_2026_15_44_39_q03okz.png",
     description:
       "Congelez et organisez vos aliments comme un pro. Papier aluminium, film alimentaire, sacs de congélation, clips de fermeture et étiquettes alimentaires pour un congélateur toujours bien rangé.",
     contents: [
@@ -165,7 +168,8 @@ export const packs: Pack[] = [
     price: 99,
     compareAtPrice: 139,
     itemsCount: 5,
-    thumbnail: PREVIEW_THUMBNAIL,
+    thumbnail:
+      "https://res.cloudinary.com/diptsoc4h/image/upload/v1785941297/ChatGPT_Image_5_ao%C3%BBt_2026_15_48_06_mb3nfb.png",
     description:
       "Un pack complet pour l'entretien et la cuisine du quotidien. Papier aluminium, film alimentaire, essuie-tout, papier cuisson et éponge double face : la maison bien tenue sans multiplier les achats.",
     contents: [
