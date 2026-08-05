@@ -16,7 +16,7 @@ export default function PacksSection() {
         <div className="mt-12 grid grid-cols-2 gap-4 sm:gap-6 lg:grid-cols-3">
           {packs.map((pack, i) => (
             <Reveal key={pack.slug} delay={i * 0.06}>
-              <PackCard pack={pack} />
+              <PackCard pack={pack} showBadge={false} />
             </Reveal>
           ))}
         </div>

@@ -7,7 +7,15 @@ import type { Pack } from "@/types";
 import PackVisual from "@/components/shared/PackVisual";
 import { formatDH } from "@/lib/utils";
 
-export default function PackCard({ pack, ctaLabel = "Voir le pack" }: { pack: Pack; ctaLabel?: string }) {
+export default function PackCard({
+  pack,
+  ctaLabel = "Voir le pack",
+  showBadge = true,
+}: {
+  pack: Pack;
+  ctaLabel?: string;
+  showBadge?: boolean;
+}) {
   return (
     <motion.div
       whileHover={{ y: -6 }}
@@ -15,7 +23,7 @@ export default function PackCard({ pack, ctaLabel = "Voir le pack" }: { pack: Pa
       className="group flex flex-col overflow-hidden rounded-xl2 border border-black/5 bg-white shadow-soft transition-shadow duration-300 hover:shadow-lift"
     >
       <Link href={`/packs/${pack.slug}`}>
-        <PackVisual pack={pack} className="rounded-none border-0" />
+        <PackVisual pack={pack} className="rounded-none border-0" showBadge={showBadge} />
       </Link>
 
       <div className="flex flex-1 flex-col p-5">
@@ -23,8 +31,8 @@ export default function PackCard({ pack, ctaLabel = "Voir le pack" }: { pack: Pa
         <p className="mt-1 text-sm text-neutral-500">{pack.itemsCount} produits inclus</p>
 
         <div className="mt-3 flex flex-wrap items-baseline gap-x-2 gap-y-0.5">
-          <span className="text-xl font-bold text-brand-dark sm:text-2xl">{formatDH(pack.price)}</span>
-          <span className="text-xs text-neutral-400 line-through sm:text-sm">{formatDH(pack.compareAtPrice)}</span>
+          <span className="text-lg font-bold text-brand-dark sm:text-xl">{formatDH(pack.price)}</span>
+          <span className="text-xs text-neutral-400 line-through">{formatDH(pack.compareAtPrice)}</span>
         </div>
 
         <Link
