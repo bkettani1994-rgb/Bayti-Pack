@@ -1,5 +1,8 @@
 import type { Pack } from "@/types";
 
+const PREVIEW_THUMBNAIL =
+  "https://res.cloudinary.com/diptsoc4h/image/upload/v1785925790/ChatGPT_Image_5_ao%C3%BBt_2026_11_29_38_g8xfx6.png";
+
 export const packs: Pack[] = [
   {
     slug: "cuisine-essentielle",
@@ -9,6 +12,7 @@ export const packs: Pack[] = [
     price: 99,
     compareAtPrice: 149,
     itemsCount: 5,
+    thumbnail: PREVIEW_THUMBNAIL,
     description:
       "Le pack indispensable pour équiper votre cuisine au quotidien. Papier aluminium, film alimentaire, papier cuisson, papier absorbant et sacs de congélation : tout ce qu'il faut pour cuisiner, conserver et emballer sans jamais tomber en rupture.",
     contents: [
@@ -47,6 +51,7 @@ export const packs: Pack[] = [
     price: 119,
     compareAtPrice: 169,
     itemsCount: 5,
+    thumbnail: PREVIEW_THUMBNAIL,
     description:
       "Reprenez le contrôle de vos placards et de votre réfrigérateur. Film alimentaire, papier aluminium, sacs zip, boîtes réutilisables et étiquettes autocollantes pour une cuisine parfaitement organisée et des aliments conservés plus longtemps.",
     contents: [
@@ -84,6 +89,7 @@ export const packs: Pack[] = [
     price: 109,
     compareAtPrice: 159,
     itemsCount: 5,
+    thumbnail: PREVIEW_THUMBNAIL,
     description:
       "Le compagnon idéal des barbecues et des sessions cuisine entre amis ou en famille. Papier aluminium renforcé, papier cuisson, film alimentaire, gants jetables et essuie-tout pour cuisiner et nettoyer sans prise de tête.",
     contents: [
@@ -121,6 +127,7 @@ export const packs: Pack[] = [
     price: 89,
     compareAtPrice: 129,
     itemsCount: 5,
+    thumbnail: PREVIEW_THUMBNAIL,
     description:
       "Congelez et organisez vos aliments comme un pro. Papier aluminium, film alimentaire, sacs de congélation, clips de fermeture et étiquettes alimentaires pour un congélateur toujours bien rangé.",
     contents: [
@@ -158,6 +165,7 @@ export const packs: Pack[] = [
     price: 99,
     compareAtPrice: 139,
     itemsCount: 5,
+    thumbnail: PREVIEW_THUMBNAIL,
     description:
       "Un pack complet pour l'entretien et la cuisine du quotidien. Papier aluminium, film alimentaire, essuie-tout, papier cuisson et éponge double face : la maison bien tenue sans multiplier les achats.",
     contents: [
