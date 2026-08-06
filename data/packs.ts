@@ -16,9 +16,24 @@ export const packs: Pack[] = [
     description:
       "Le pack indispensable pour équiper votre cuisine au quotidien. Papier aluminium, film alimentaire, papier cuisson, papier absorbant et sacs de congélation : tout ce qu'il faut pour cuisiner, conserver et emballer sans jamais tomber en rupture.",
     contents: [
-      { name: "Papier aluminium 30 m", icon: "foil" },
-      { name: "Film alimentaire 30 m", icon: "wrap" },
-      { name: "Papier cuisson", icon: "parchment" },
+      {
+        name: "Papier aluminium 30 m",
+        icon: "foil",
+        image:
+          "https://res.cloudinary.com/diptsoc4h/image/upload/v1786028917/ChatGPT_Image_6_ao%C3%BBt_2026_16_07_22_ub1cbg.png",
+      },
+      {
+        name: "Film alimentaire 30 m",
+        icon: "wrap",
+        image:
+          "https://res.cloudinary.com/diptsoc4h/image/upload/v1786028917/ChatGPT_Image_6_ao%C3%BBt_2026_16_07_26_fj3eqd.png",
+      },
+      {
+        name: "Papier cuisson",
+        icon: "parchment",
+        image:
+          "https://res.cloudinary.com/diptsoc4h/image/upload/v1786028916/ChatGPT_Image_6_ao%C3%BBt_2026_16_07_54_bnhlmd.png",
+      },
       { name: "Papier absorbant (2 rouleaux)", icon: "paperTowel" },
       { name: "Sacs de congélation (50 pièces)", icon: "freezerBag" },
     ],

@@ -1,3 +1,4 @@
+import Image from "next/image";
 import type { Pack } from "@/types";
 import { AppIcon } from "@/components/shared/icon-map";
 import Reveal from "@/components/shared/Reveal";
@@ -12,9 +13,15 @@ export default function IncludedProducts({ pack }: { pack: Pack }) {
         {pack.contents.map((item, i) => (
           <Reveal key={item.name} delay={i * 0.05}>
             <div className="flex items-center gap-4 rounded-xl2 border border-black/5 bg-white p-5 shadow-soft">
-              <div className="flex h-12 w-12 flex-shrink-0 items-center justify-center rounded-full bg-brand-light">
-                <AppIcon icon={item.icon} className="h-6 w-6 text-brand-dark" />
-              </div>
+              {item.image ? (
+                <div className="relative h-12 w-12 flex-shrink-0 overflow-hidden rounded-full bg-brand-light">
+                  <Image src={item.image} alt={item.name} fill sizes="48px" className="object-cover" />
+                </div>
+              ) : (
+                <div className="flex h-12 w-12 flex-shrink-0 items-center justify-center rounded-full bg-brand-light">
+                  <AppIcon icon={item.icon} className="h-6 w-6 text-brand-dark" />
+                </div>
+              )}
               <p className="font-medium text-ink">{item.name}</p>
             </div>
           </Reveal>

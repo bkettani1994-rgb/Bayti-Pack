@@ -1,6 +1,7 @@
 "use client";
 
 import { useState } from "react";
+import Image from "next/image";
 import { PackageCheck } from "lucide-react";
 import type { Pack } from "@/types";
 import { AppIcon } from "@/components/shared/icon-map";
@@ -44,6 +45,14 @@ export default function Gallery({ pack }: { pack: Pack }) {
               })}
             </div>
           </div>
+        ) : current.items[0].image ? (
+          <Image
+            src={current.items[0].image}
+            alt={current.label}
+            fill
+            sizes="(min-width: 1024px) 500px, 100vw"
+            className="object-cover"
+          />
         ) : (
           <div className="absolute inset-0 flex flex-col items-center justify-center gap-4">
             <div className="flex h-24 w-24 items-center justify-center rounded-2xl bg-white shadow-card">
@@ -60,13 +69,15 @@ export default function Gallery({ pack }: { pack: Pack }) {
             key={slide.label}
             onClick={() => setActive(i)}
             className={cn(
-              "flex aspect-square items-center justify-center rounded-lg border bg-white transition-colors",
+              "relative flex aspect-square items-center justify-center overflow-hidden rounded-lg border bg-white transition-colors",
               active === i ? "border-brand ring-2 ring-brand/30" : "border-black/10 hover:border-brand/40"
             )}
             aria-label={slide.label}
           >
             {i === 0 ? (
               <PackageCheck className="h-5 w-5 text-brand" />
+            ) : slide.items[0].image ? (
+              <Image src={slide.items[0].image} alt={slide.label} fill sizes="60px" className="object-cover" />
             ) : (
               <AppIcon icon={slide.items[0].icon} className="h-5 w-5 text-brand-dark" />
             )}
