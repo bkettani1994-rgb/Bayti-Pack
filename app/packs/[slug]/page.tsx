@@ -52,7 +52,7 @@ export default function ProductPage({ params }: { params: { slug: string } }) {
       />
 
       <div className="container-content">
-        <ProductInteractive pack={pack} allPacks={packs} />
+        <ProductInteractive pack={pack} />
       </div>
 
       <IncludedProducts pack={pack} />

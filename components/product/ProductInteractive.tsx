@@ -9,7 +9,7 @@ import BundleSelector from "@/components/product/BundleSelector";
 import OrderForm from "@/components/product/OrderForm";
 import StickyAddToCart from "@/components/product/StickyAddToCart";
 
-export default function ProductInteractive({ pack, allPacks }: { pack: Pack; allPacks: Pack[] }) {
+export default function ProductInteractive({ pack }: { pack: Pack }) {
   const [qty, setQty] = useState<1 | 2 | 3>(1);
   const tiers = computeBundleTiers(pack.price);
   const selectedTier = tiers[qty - 1];
@@ -56,7 +56,7 @@ export default function ProductInteractive({ pack, allPacks }: { pack: Pack; all
       </div>
 
       <div ref={formRef} className="mx-auto mt-16 max-w-xl scroll-mt-24">
-        <OrderForm pack={pack} allPacks={allPacks} qty={qty} setQty={setQty} total={selectedTier.total} />
+        <OrderForm pack={pack} qty={qty} setQty={setQty} />
       </div>
 
       <StickyAddToCart total={selectedTier.total} onOrder={scrollToForm} />

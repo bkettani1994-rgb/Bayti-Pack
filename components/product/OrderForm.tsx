@@ -3,22 +3,21 @@
 import { useState, type FormEvent } from "react";
 import { CheckCircle2, Loader2 } from "lucide-react";
 import type { Pack } from "@/types";
+import { computeBundleTiers } from "@/lib/pricing";
 import { formatDH } from "@/lib/utils";
+import BundleSelector from "@/components/product/BundleSelector";
 
 export default function OrderForm({
   pack,
-  allPacks,
   qty,
   setQty,
-  total,
 }: {
   pack: Pack;
-  allPacks: Pack[];
   qty: 1 | 2 | 3;
   setQty: (qty: 1 | 2 | 3) => void;
-  total: number;
 }) {
-  const [packSlug, setPackSlug] = useState(pack.slug);
+  const tiers = computeBundleTiers(pack.price);
+  const total = tiers[qty - 1].total;
   const [status, setStatus] = useState<"idle" | "submitting" | "success" | "error">("idle");
 
   async function handleSubmit(e: FormEvent<HTMLFormElement>) {
@@ -35,7 +34,7 @@ export default function OrderForm({
           phone: form.get("phone"),
           city: form.get("city"),
           address: form.get("address"),
-          packSlug,
+          packSlug: pack.slug,
           quantity: qty,
         }),
       });
@@ -59,9 +58,16 @@ export default function OrderForm({
   }
 
   return (
-    <form onSubmit={handleSubmit} className="space-y-4 rounded-xl2 border border-black/5 bg-white p-6 shadow-soft sm:p-8">
-      <h3 className="text-xl font-bold text-ink">Passer ma commande</h3>
-      <p className="text-sm text-neutral-500">Paiement à la livraison. Aucune carte bancaire requise.</p>
+    <form onSubmit={handleSubmit} className="space-y-5 rounded-xl2 border border-black/5 bg-white p-6 shadow-soft sm:p-8">
+      <div>
+        <h3 className="text-xl font-bold text-ink">Passer ma commande</h3>
+        <p className="mt-1 text-sm text-neutral-500">Paiement à la livraison. Aucune carte bancaire requise.</p>
+      </div>
+
+      <div>
+        <p className="mb-3 text-sm font-semibold text-ink">Choisissez votre offre</p>
+        <BundleSelector tiers={tiers} selected={qty} onSelect={setQty} />
+      </div>
 
       <div className="grid gap-4 sm:grid-cols-2">
         <div className="sm:col-span-2">
@@ -82,29 +88,6 @@ export default function OrderForm({
         <div className="sm:col-span-2">
           <label htmlFor="address" className="mb-1.5 block text-sm font-medium text-ink">Adresse</label>
           <input id="address" name="address" required placeholder="Rue, quartier, ville" className="w-full rounded-lg border border-black/10 px-4 py-3 text-sm outline-none focus:border-brand focus:ring-2 focus:ring-brand/20" />
-        </div>
-
-        <div>
-          <label htmlFor="pack" className="mb-1.5 block text-sm font-medium text-ink">Choix du pack</label>
-          <select id="pack" value={packSlug} onChange={(e) => setPackSlug(e.target.value)} className="w-full rounded-lg border border-black/10 px-4 py-3 text-sm outline-none focus:border-brand focus:ring-2 focus:ring-brand/20">
-            {allPacks.map((p) => (
-              <option key={p.slug} value={p.slug}>{p.name}</option>
-            ))}
-          </select>
-        </div>
-
-        <div>
-          <label htmlFor="quantity" className="mb-1.5 block text-sm font-medium text-ink">Quantité</label>
-          <select
-            id="quantity"
-            value={qty}
-            onChange={(e) => setQty(Number(e.target.value) as 1 | 2 | 3)}
-            className="w-full rounded-lg border border-black/10 px-4 py-3 text-sm outline-none focus:border-brand focus:ring-2 focus:ring-brand/20"
-          >
-            <option value={1}>1 Pack</option>
-            <option value={2}>2 Packs</option>
-            <option value={3}>3 Packs</option>
-          </select>
         </div>
       </div>
 
