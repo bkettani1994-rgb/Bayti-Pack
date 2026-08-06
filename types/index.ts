@@ -45,4 +45,5 @@ export type Pack = {
   featured?: boolean;
   heroImage?: string;
   thumbnail?: string;
+  mainImage?: string;
 };

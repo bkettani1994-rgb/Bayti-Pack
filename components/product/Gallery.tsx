@@ -21,7 +21,16 @@ export default function Gallery({ pack }: { pack: Pack }) {
         <div className="absolute -right-10 -top-10 h-48 w-48 rounded-full bg-brand/15 blur-2xl" />
         <div className="absolute -bottom-14 -left-10 h-40 w-40 rounded-full bg-brand/10 blur-2xl" />
 
-        {active === 0 ? (
+        {active === 0 && pack.mainImage ? (
+          <Image
+            src={pack.mainImage}
+            alt={pack.name}
+            fill
+            priority
+            sizes="(min-width: 1024px) 500px, 100vw"
+            className="object-cover"
+          />
+        ) : active === 0 ? (
           <div className="absolute inset-0 flex items-center justify-center">
             <div className="flex h-28 w-28 items-center justify-center rounded-2xl bg-white shadow-card sm:h-32 sm:w-32">
               <PackageCheck className="h-16 w-16 text-brand" strokeWidth={1.5} />
@@ -74,7 +83,9 @@ export default function Gallery({ pack }: { pack: Pack }) {
             )}
             aria-label={slide.label}
           >
-            {i === 0 ? (
+            {i === 0 && pack.mainImage ? (
+              <Image src={pack.mainImage} alt={slide.label} fill sizes="60px" className="object-cover" />
+            ) : i === 0 ? (
               <PackageCheck className="h-5 w-5 text-brand" />
             ) : slide.items[0].image ? (
               <Image src={slide.items[0].image} alt={slide.label} fill sizes="60px" className="object-cover" />

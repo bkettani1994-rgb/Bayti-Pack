@@ -13,6 +13,7 @@ export const packs: Pack[] = [
     compareAtPrice: 149,
     itemsCount: 5,
     thumbnail: PREVIEW_THUMBNAIL,
+    mainImage: PREVIEW_THUMBNAIL,
     description:
       "Le pack indispensable pour équiper votre cuisine au quotidien. Papier aluminium, film alimentaire, papier cuisson, papier absorbant et sacs de congélation : tout ce qu'il faut pour cuisiner, conserver et emballer sans jamais tomber en rupture.",
     contents: [
