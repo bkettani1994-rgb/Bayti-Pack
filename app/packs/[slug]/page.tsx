@@ -45,7 +45,7 @@ export default function ProductPage({ params }: { params: { slug: string } }) {
   };
 
   return (
-    <div className="pb-24 pt-10 sm:pt-14 lg:pb-14">
+    <div className="pb-14 pt-10 sm:pt-14">
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}

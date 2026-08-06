@@ -5,9 +5,7 @@ import type { Pack } from "@/types";
 import { computeBundleTiers } from "@/lib/pricing";
 import { formatDH } from "@/lib/utils";
 import Gallery from "@/components/product/Gallery";
-import BundleSelector from "@/components/product/BundleSelector";
 import OrderForm from "@/components/product/OrderForm";
-import StickyAddToCart from "@/components/product/StickyAddToCart";
 
 export default function ProductInteractive({ pack }: { pack: Pack }) {
   const [qty, setQty] = useState<1 | 2 | 3>(1);
@@ -44,12 +42,7 @@ export default function ProductInteractive({ pack }: { pack: Pack }) {
 
           <p className="mt-5 leading-relaxed text-neutral-600">{pack.description}</p>
 
-          <div className="mt-8">
-            <p className="mb-3 text-sm font-semibold text-ink">Choisissez votre offre</p>
-            <BundleSelector tiers={tiers} selected={qty} onSelect={setQty} />
-          </div>
-
-          <button onClick={scrollToForm} className="btn-primary mt-6 w-full text-lg">
+          <button onClick={scrollToForm} className="btn-primary mt-8 w-full text-lg">
             Commander maintenant — {formatDH(selectedTier.total)}
           </button>
         </div>
@@ -58,8 +51,6 @@ export default function ProductInteractive({ pack }: { pack: Pack }) {
       <div ref={formRef} className="mx-auto mt-16 max-w-xl scroll-mt-24">
         <OrderForm pack={pack} qty={qty} setQty={setQty} />
       </div>
-
-      <StickyAddToCart total={selectedTier.total} onOrder={scrollToForm} />
     </>
   );
 }
