@@ -35,8 +35,16 @@ export const packs: Pack[] = [
         image:
           "https://res.cloudinary.com/diptsoc4h/image/upload/v1786028916/ChatGPT_Image_6_ao%C3%BBt_2026_16_07_54_bnhlmd.png",
       },
-      { name: "Papier absorbant (2 rouleaux)", icon: "paperTowel" },
-      { name: "Sacs de congélation (50 pièces)", icon: "freezerBag" },
+      {
+        name: "Papier absorbant (2 rouleaux)",
+        icon: "paperTowel",
+        image: "https://res.cloudinary.com/diptsoc4h/image/upload/v1786034550/IMG_2783_yxuxjy.png",
+      },
+      {
+        name: "Sacs de congélation (50 pièces)",
+        icon: "freezerBag",
+        image: "https://res.cloudinary.com/diptsoc4h/image/upload/v1786034551/IMG_2784_itnc1z.png",
+      },
     ],
     advantages: [
       {
