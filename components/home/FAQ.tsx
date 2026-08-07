@@ -18,8 +18,8 @@ const faqs = [
     answer: "Vos packs sont généralement livrés sous 2 à 5 jours ouvrables selon votre ville.",
   },
   {
-    question: "Puis-je commander plusieurs packs différents ?",
-    answer: "Oui, vous pouvez commander plusieurs packs. Contactez-nous directement ou passez plusieurs commandes séparées.",
+    question: "Puis-je commander plusieurs packs à la fois ?",
+    answer: "Oui, choisissez directement l'offre x2 ou x3 sur le formulaire de commande pour bénéficier d'un tarif dégressif.",
   },
   {
     question: "Les produits sont-ils de qualité ?",

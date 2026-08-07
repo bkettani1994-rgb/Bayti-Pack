@@ -4,6 +4,7 @@ import Reveal from "@/components/shared/Reveal";
 
 export default function Upsell({ slug }: { slug: string }) {
   const others = getOtherPacks(slug);
+  if (others.length === 0) return null;
 
   return (
     <div className="container-content py-14 sm:py-16">

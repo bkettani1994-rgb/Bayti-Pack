@@ -69,6 +69,7 @@ export const packs: Pack[] = [
   },
   {
     slug: "pack-rangement",
+    hidden: true,
     name: "Pack Rangement",
     shortName: "Rangement",
     tagline: "Organisez votre cuisine sans effort",
@@ -108,6 +109,7 @@ export const packs: Pack[] = [
   },
   {
     slug: "pack-bbq-cuisine",
+    hidden: true,
     name: "Pack BBQ & Cuisine",
     shortName: "BBQ & Cuisine",
     tagline: "Parfait pour les grillades et la cuisson",
@@ -147,6 +149,7 @@ export const packs: Pack[] = [
   },
   {
     slug: "pack-congelation",
+    hidden: true,
     name: "Pack Congélation",
     shortName: "Congélation",
     tagline: "Conservez plus, gaspillez moins",
@@ -186,6 +189,7 @@ export const packs: Pack[] = [
   },
   {
     slug: "pack-economie-maison",
+    hidden: true,
     name: "Pack Économie Maison",
     shortName: "Économie Maison",
     tagline: "L'essentiel pour toute la maison",
@@ -223,10 +227,12 @@ export const packs: Pack[] = [
   },
 ];
 
+export const visiblePacks = packs.filter((p) => !p.hidden);
+
 export function getPackBySlug(slug: string): Pack | undefined {
   return packs.find((p) => p.slug === slug);
 }
 
 export function getOtherPacks(slug: string): Pack[] {
-  return packs.filter((p) => p.slug !== slug);
+  return visiblePacks.filter((p) => p.slug !== slug);
 }

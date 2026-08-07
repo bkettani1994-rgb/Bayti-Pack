@@ -1,5 +1,5 @@
 import type { MetadataRoute } from "next";
-import { packs } from "@/data/packs";
+import { visiblePacks } from "@/data/packs";
 
 const siteUrl = "https://www.baytipack.ma";
 
@@ -18,7 +18,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     priority: path === "" ? 1 : 0.7,
   }));
 
-  const productRoutes = packs.map((pack) => ({
+  const productRoutes = visiblePacks.map((pack) => ({
     url: `${siteUrl}/packs/${pack.slug}`,
     lastModified: new Date(),
     changeFrequency: "weekly" as const,

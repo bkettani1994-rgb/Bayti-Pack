@@ -2,7 +2,7 @@ import { MousePointerClick, ClipboardCheck, Truck } from "lucide-react";
 import Reveal from "@/components/shared/Reveal";
 
 const steps = [
-  { number: "1", icon: MousePointerClick, title: "Choisissez votre pack", description: "Parcourez nos 5 packs et sélectionnez celui qui correspond à vos besoins." },
+  { number: "1", icon: MousePointerClick, title: "Choisissez votre offre", description: "Sélectionnez la quantité qui correspond à vos besoins." },
   { number: "2", icon: ClipboardCheck, title: "Passez votre commande", description: "Remplissez le formulaire en 30 secondes, sans compte à créer." },
   { number: "3", icon: Truck, title: "Recevez votre colis", description: "Votre pack est livré chez vous, paiement à la réception." },
 ];

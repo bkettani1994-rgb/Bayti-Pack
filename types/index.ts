@@ -46,4 +46,5 @@ export type Pack = {
   heroImage?: string;
   thumbnail?: string;
   mainImage?: string;
+  hidden?: boolean;
 };
