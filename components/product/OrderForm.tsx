@@ -66,7 +66,7 @@ export default function OrderForm({
 
       <div>
         <p className="mb-3 text-sm font-semibold text-ink">Choisissez votre offre</p>
-        <BundleSelector tiers={tiers} contents={pack.contents} selected={qty} onSelect={setQty} />
+        <BundleSelector tiers={tiers} selected={qty} onSelect={setQty} />
       </div>
 
       <div className="grid gap-4 sm:grid-cols-2">
