@@ -6,7 +6,7 @@ import Reveal from "@/components/shared/Reveal";
 export const metadata: Metadata = {
   title: "Catalogue des packs cuisine",
   description:
-    "Découvrez le Pack Cuisine Essentielle : papier aluminium, film alimentaire, papier cuisson, papier absorbant et sacs de congélation. Dès 99 DH, livraison rapide.",
+    "Découvrez le Pack Cuisine Essentielle : papier aluminium, film alimentaire, papier cuisson et sacs étirables à couvercle jetable. Dès 99 DH, livraison rapide.",
   alternates: { canonical: "/packs" },
 };
 

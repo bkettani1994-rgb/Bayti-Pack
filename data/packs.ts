@@ -11,45 +11,39 @@ export const packs: Pack[] = [
     tagline: "Le pack star pour démarrer",
     price: 99,
     compareAtPrice: 149,
-    itemsCount: 5,
+    itemsCount: 4,
     thumbnail: PREVIEW_THUMBNAIL,
     mainImage: PREVIEW_THUMBNAIL,
     description:
-      "Le pack indispensable pour équiper votre cuisine au quotidien. Papier aluminium, film alimentaire, papier cuisson, papier absorbant et sacs de congélation : tout ce qu'il faut pour cuisiner, conserver et emballer sans jamais tomber en rupture.",
+      "Le pack indispensable pour équiper votre cuisine au quotidien. Papier aluminium, film alimentaire, papier cuisson et sacs étirables à couvercle jetable : tout ce qu'il faut pour cuisiner, conserver et emballer sans jamais tomber en rupture.",
     contents: [
       {
-        name: "Papier aluminium 30 m",
+        name: "Papier Aluminium 60 mètres",
         icon: "foil",
         image:
           "https://res.cloudinary.com/diptsoc4h/image/upload/v1786028917/ChatGPT_Image_6_ao%C3%BBt_2026_16_07_22_ub1cbg.png",
       },
       {
-        name: "Film alimentaire 30 m",
+        name: "Film alimentaire 100 mètres",
         icon: "wrap",
         image:
           "https://res.cloudinary.com/diptsoc4h/image/upload/v1786028917/ChatGPT_Image_6_ao%C3%BBt_2026_16_07_26_fj3eqd.png",
       },
       {
-        name: "Papier cuisson",
+        name: "Papier cuisson 40 mètres",
         icon: "parchment",
         image:
           "https://res.cloudinary.com/diptsoc4h/image/upload/v1786028916/ChatGPT_Image_6_ao%C3%BBt_2026_16_07_54_bnhlmd.png",
       },
       {
-        name: "Papier absorbant (2 rouleaux)",
-        icon: "paperTowel",
-        image: "https://res.cloudinary.com/diptsoc4h/image/upload/v1786034550/IMG_2783_yxuxjy.png",
-      },
-      {
-        name: "Sacs de congélation (50 pièces)",
-        icon: "freezerBag",
-        image: "https://res.cloudinary.com/diptsoc4h/image/upload/v1786034551/IMG_2784_itnc1z.png",
+        name: "Sac étirable couvercle jetable x100",
+        icon: "wrap",
       },
     ],
     advantages: [
       {
         title: "Le plus complet",
-        description: "5 produits essentiels réunis pour couvrir tous vos besoins de base en cuisine.",
+        description: "4 produits essentiels réunis pour couvrir tous vos besoins de base en cuisine.",
         icon: "package",
       },
       {
