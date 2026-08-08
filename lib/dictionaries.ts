@@ -1,6 +1,7 @@
 import type { Locale } from "@/lib/i18n";
 
 export type Dictionary = {
+  announcement: string[];
   nav: {
     home: string;
     packs: string;

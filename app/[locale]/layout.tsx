@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { Inter, Cairo } from "next/font/google";
 import { notFound } from "next/navigation";
 import "../globals.css";
+import AnnouncementBar from "@/components/layout/AnnouncementBar";
 import Header from "@/components/layout/Header";
 import Footer from "@/components/layout/Footer";
 import { locales, isLocale, type Locale } from "@/lib/i18n";
@@ -80,6 +81,7 @@ export default function LocaleLayout({
   return (
     <html lang={locale} dir={locale === "ar" ? "rtl" : "ltr"} className={cn(inter.variable, cairo.variable)}>
       <body className={cn("flex min-h-screen flex-col antialiased", locale === "ar" ? "font-arabic" : "font-sans")}>
+        <AnnouncementBar messages={dict.announcement} />
         <Header locale={locale} dict={dict} />
         <main className="flex-1">{children}</main>
         <Footer locale={locale} dict={dict} />

@@ -5,6 +5,12 @@ export const fr: Dictionary = {
   siteDefaultTitle: "Bayti Pack — Packs d'accessoires de cuisine indispensables",
   siteDefaultDescription:
     "Tous les indispensables de votre cuisine réunis dans des packs économiques. Papier aluminium, film alimentaire, sacs congélation et plus. Livraison rapide, paiement à la livraison.",
+  announcement: [
+    "⭐ 4 essentiels de cuisine réunis dans 1 seul pack",
+    "💰 Plus de mètres, moins de dépenses !",
+    "🏠 Acheté 1 fois, tranquille pour longtemps",
+    "🔥 Le pack malin pour une cuisine toujours prête !",
+  ],
   nav: {
     home: "Accueil",
     packs: "Nos Packs",
