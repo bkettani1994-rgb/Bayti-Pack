@@ -65,7 +65,8 @@ export default function OrderForm({
   return (
     <form onSubmit={handleSubmit} className="space-y-5 rounded-xl2 border border-black/5 bg-white p-6 shadow-soft sm:p-8">
       <div>
-        <h3 className="mb-4 text-xl font-bold text-ink">{f.offerLabel}</h3>
+        <h3 className="text-center text-xl font-bold text-ink">{f.offerLabel}</h3>
+        <p className="mb-4 mt-1.5 text-center text-sm text-neutral-500">{f.deliveryHint}</p>
         <BundleSelector
           tiers={tiers}
           selected={qty}

@@ -104,6 +104,7 @@ export const ar: Dictionary = {
       heading: "إتمام طلبي",
       subtitle: "الدفع عند الاستلام. لا حاجة لبطاقة بنكية.",
       offerLabel: "اختاروا عرضكم",
+      deliveryHint: "ثم أدخلوا معلوماتكم لتنظيم التوصيل.",
       nameLabel: "الاسم الكامل",
       namePlaceholder: "اسمكم",
       phoneLabel: "الهاتف",

@@ -105,6 +105,7 @@ export const fr: Dictionary = {
       heading: "Passer ma commande",
       subtitle: "Paiement à la livraison. Aucune carte bancaire requise.",
       offerLabel: "Choisissez votre offre",
+      deliveryHint: "Puis renseignez vos informations pour la livraison.",
       nameLabel: "Nom complet",
       namePlaceholder: "Votre nom",
       phoneLabel: "Téléphone",

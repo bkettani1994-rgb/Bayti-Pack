@@ -62,6 +62,7 @@ export type Dictionary = {
       heading: string;
       subtitle: string;
       offerLabel: string;
+      deliveryHint: string;
       nameLabel: string;
       namePlaceholder: string;
       phoneLabel: string;
