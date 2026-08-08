@@ -77,6 +77,16 @@ export type Dictionary = {
       successMessage: string;
     };
     bundle: { perPack: string; save: string };
+    comparison: {
+      heading: string;
+      ourColumn: string;
+      othersColumn: string;
+      rows: string[];
+    };
+    faq: {
+      heading: string;
+      items: { question: string; answer: string }[];
+    };
   };
   contact: {
     heading: string;

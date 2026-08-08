@@ -6,6 +6,8 @@ import { getDictionary } from "@/lib/dictionaries";
 import ProductInteractive from "@/components/product/ProductInteractive";
 import IncludedProducts from "@/components/product/IncludedProducts";
 import Advantages from "@/components/product/Advantages";
+import ComparisonTable from "@/components/product/ComparisonTable";
+import ProductFAQ from "@/components/product/ProductFAQ";
 import Upsell from "@/components/product/Upsell";
 
 export function generateStaticParams() {
@@ -66,6 +68,8 @@ export default function ProductPage({ params }: { params: { locale: string; slug
 
       <IncludedProducts pack={pack} heading={dict.product.includedHeading} />
       <Advantages pack={pack} heading={dict.product.whyChooseHeading} />
+      <ComparisonTable comparison={dict.product.comparison} />
+      <ProductFAQ faq={dict.product.faq} />
       <Upsell slug={pack.slug} locale={locale} dict={dict} />
     </div>
   );

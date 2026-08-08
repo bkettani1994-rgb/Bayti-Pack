@@ -120,6 +120,46 @@ export const fr: Dictionary = {
       successMessage: "Merci ! Nous vous contactons très vite pour confirmer la livraison. Paiement à la réception.",
     },
     bundle: { perPack: "/ pack", save: "Économisez" },
+    comparison: {
+      heading: "Bayti Pack vs achat séparé",
+      ourColumn: "Bayti Pack",
+      othersColumn: "Achat à l'unité",
+      rows: [
+        "Tous les essentiels réunis dans une seule commande",
+        "Tarif réduit grâce à l'achat groupé",
+        "Une seule livraison, un seul frais",
+        "Paiement à la livraison, sans avance",
+        "Gain de temps : plus besoin de chercher chaque produit",
+      ],
+    },
+    faq: {
+      heading: "Questions fréquentes sur ce pack",
+      items: [
+        {
+          question: "Ce pack convient-il à un usage quotidien intensif ?",
+          answer:
+            "Oui, tous les produits sont sélectionnés pour leur résistance et supportent un usage quotidien intensif, en cuisine comme pour les grandes occasions.",
+        },
+        {
+          question: "Les rouleaux sont-ils au format standard ?",
+          answer:
+            "Oui, le papier aluminium (60 m), le film alimentaire (100 m) et le papier cuisson (40 m) sont aux formats standards utilisés dans toutes les cuisines.",
+        },
+        {
+          question: "Puis-je commander ce pack plusieurs fois ?",
+          answer:
+            "Bien sûr, choisissez directement l'offre x2 ou x3 sur le formulaire de commande pour bénéficier d'un tarif dégressif.",
+        },
+        {
+          question: "Les 4 produits sont-ils livrés ensemble ?",
+          answer: "Oui, les 4 produits du pack sont emballés et livrés ensemble en une seule fois.",
+        },
+        {
+          question: "Que faire si un produit est manquant ou endommagé ?",
+          answer: "Contactez-nous sous 48h via la page Contact, nous vous proposerons rapidement une solution.",
+        },
+      ],
+    },
   },
   contact: {
     heading: "Contact",
