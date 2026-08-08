@@ -72,7 +72,10 @@ export default function Gallery({ pack }: { pack: Pack }) {
         )}
       </div>
 
-      <div className="mt-4 grid grid-cols-6 gap-2 sm:grid-cols-6">
+      <div
+        className="mt-4 grid gap-2"
+        style={{ gridTemplateColumns: `repeat(${slides.length}, minmax(0, 1fr))` }}
+      >
         {slides.map((slide, i) => (
           <button
             key={slide.label}
