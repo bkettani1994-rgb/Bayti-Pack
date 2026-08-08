@@ -16,7 +16,7 @@ export default function LanguageSwitcher({ locale, className }: { locale: Locale
         href={localizedHref(cleanPath, "fr")}
         className={cn(
           "rounded-full px-2.5 py-1 transition-colors",
-          locale === "fr" ? "bg-ink text-white" : "text-neutral-500 hover:text-ink"
+          locale === "fr" ? "bg-brand text-white" : "text-neutral-500 hover:text-ink"
         )}
       >
         FR
@@ -25,7 +25,7 @@ export default function LanguageSwitcher({ locale, className }: { locale: Locale
         href={localizedHref(cleanPath, "ar")}
         className={cn(
           "rounded-full px-2.5 py-1 transition-colors",
-          locale === "ar" ? "bg-ink text-white" : "text-neutral-500 hover:text-ink"
+          locale === "ar" ? "bg-brand text-white" : "text-neutral-500 hover:text-ink"
         )}
       >
         AR
