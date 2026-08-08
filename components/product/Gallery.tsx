@@ -24,7 +24,7 @@ export default function Gallery({ pack }: { pack: Pack }) {
         {active === 0 && pack.mainImage ? (
           <Image
             src={pack.mainImage}
-            alt={pack.name}
+            alt={pack.imageAlt ?? `${pack.name} — Bayti Pack`}
             fill
             priority
             sizes="(min-width: 1024px) 500px, 100vw"
@@ -57,7 +57,7 @@ export default function Gallery({ pack }: { pack: Pack }) {
         ) : current.items[0].image ? (
           <Image
             src={current.items[0].image}
-            alt={current.label}
+            alt={current.items[0].imageAlt ?? `${current.label} — ${pack.name} — Bayti Pack`}
             fill
             sizes="(min-width: 1024px) 500px, 100vw"
             className="object-cover"
@@ -87,11 +87,23 @@ export default function Gallery({ pack }: { pack: Pack }) {
             aria-label={slide.label}
           >
             {i === 0 && pack.mainImage ? (
-              <Image src={pack.mainImage} alt={slide.label} fill sizes="60px" className="object-cover" />
+              <Image
+                src={pack.mainImage}
+                alt={pack.imageAlt ?? `${pack.name} — Bayti Pack`}
+                fill
+                sizes="60px"
+                className="object-cover"
+              />
             ) : i === 0 ? (
               <PackageCheck className="h-5 w-5 text-brand" />
             ) : slide.items[0].image ? (
-              <Image src={slide.items[0].image} alt={slide.label} fill sizes="60px" className="object-cover" />
+              <Image
+                src={slide.items[0].image}
+                alt={slide.items[0].imageAlt ?? `${slide.label} — ${pack.name} — Bayti Pack`}
+                fill
+                sizes="60px"
+                className="object-cover"
+              />
             ) : (
               <AppIcon icon={slide.items[0].icon} className="h-5 w-5 text-brand-dark" />
             )}

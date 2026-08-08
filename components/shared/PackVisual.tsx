@@ -34,7 +34,7 @@ export default function PackVisual({
       {pack.thumbnail ? (
         <Image
           src={pack.thumbnail}
-          alt={pack.name}
+          alt={pack.imageAlt ?? `${pack.name} — Bayti Pack`}
           fill
           sizes="(min-width: 1024px) 400px, 50vw"
           className="object-cover"

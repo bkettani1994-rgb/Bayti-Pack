@@ -23,6 +23,7 @@ export type PackItem = {
   name: string;
   icon: IconKey;
   image?: string;
+  imageAlt?: string;
 };
 
 export type Advantage = {
@@ -46,5 +47,6 @@ export type Pack = {
   heroImage?: string;
   thumbnail?: string;
   mainImage?: string;
+  imageAlt?: string;
   hidden?: boolean;
 };

@@ -15,7 +15,13 @@ export default function IncludedProducts({ pack }: { pack: Pack }) {
             <div className="flex items-center gap-4 rounded-xl2 border border-black/5 bg-white p-5 shadow-soft">
               {item.image ? (
                 <div className="relative h-12 w-12 flex-shrink-0 overflow-hidden rounded-full bg-brand-light">
-                  <Image src={item.image} alt={item.name} fill sizes="48px" className="object-cover" />
+                  <Image
+                    src={item.image}
+                    alt={item.imageAlt ?? `${item.name} — ${pack.name} — Bayti Pack`}
+                    fill
+                    sizes="48px"
+                    className="object-cover"
+                  />
                 </div>
               ) : (
                 <div className="flex h-12 w-12 flex-shrink-0 items-center justify-center rounded-full bg-brand-light">

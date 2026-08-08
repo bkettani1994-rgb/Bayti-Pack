@@ -1,8 +1,5 @@
 import type { Pack } from "@/types";
 
-const PREVIEW_THUMBNAIL =
-  "https://res.cloudinary.com/diptsoc4h/image/upload/v1785925790/ChatGPT_Image_5_ao%C3%BBt_2026_11_29_38_g8xfx6.png";
-
 export const packs: Pack[] = [
   {
     slug: "cuisine-essentielle",
@@ -12,8 +9,12 @@ export const packs: Pack[] = [
     price: 99,
     compareAtPrice: 149,
     itemsCount: 4,
-    thumbnail: PREVIEW_THUMBNAIL,
-    mainImage: PREVIEW_THUMBNAIL,
+    thumbnail:
+      "https://res.cloudinary.com/diptsoc4h/image/upload/v1786178467/Gemini_Generated_Image_a5cup3a5cup3a5cu_kusg5m.png",
+    mainImage:
+      "https://res.cloudinary.com/diptsoc4h/image/upload/v1786178467/Gemini_Generated_Image_a5cup3a5cup3a5cu_kusg5m.png",
+    imageAlt:
+      "Pack Cuisine Essentielle Bayti Pack complet avec papier aluminium, film alimentaire, papier cuisson et sacs étirables jetables",
     description:
       "Le pack indispensable pour équiper votre cuisine au quotidien. Papier aluminium, film alimentaire, papier cuisson et sacs étirables à couvercle jetable : tout ce qu'il faut pour cuisiner, conserver et emballer sans jamais tomber en rupture.",
     contents: [
@@ -21,23 +22,29 @@ export const packs: Pack[] = [
         name: "Papier Aluminium 60 mètres",
         icon: "foil",
         image:
-          "https://res.cloudinary.com/diptsoc4h/image/upload/v1786028917/ChatGPT_Image_6_ao%C3%BBt_2026_16_07_22_ub1cbg.png",
+          "https://res.cloudinary.com/diptsoc4h/image/upload/v1786178466/Design_sans_titre_92_zjjz83.png",
+        imageAlt: "Rouleau de papier aluminium alimentaire 60 mètres Bayti Pack",
       },
       {
         name: "Film alimentaire 100 mètres",
         icon: "wrap",
         image:
-          "https://res.cloudinary.com/diptsoc4h/image/upload/v1786028917/ChatGPT_Image_6_ao%C3%BBt_2026_16_07_26_fj3eqd.png",
+          "https://res.cloudinary.com/diptsoc4h/image/upload/v1786178467/Gemini_Generated_Image_dx26ubdx26ubdx26_vh2zmr.png",
+        imageAlt: "Rouleau de film alimentaire étirable 100 mètres Bayti Pack",
       },
       {
         name: "Papier cuisson 40 mètres",
         icon: "parchment",
         image:
-          "https://res.cloudinary.com/diptsoc4h/image/upload/v1786028916/ChatGPT_Image_6_ao%C3%BBt_2026_16_07_54_bnhlmd.png",
+          "https://res.cloudinary.com/diptsoc4h/image/upload/v1786178466/Design_sans_titre_91_vwiuap.png",
+        imageAlt: "Rouleau de papier cuisson sulfurisé 40 mètres Bayti Pack",
       },
       {
         name: "Sac étirable couvercle jetable x100",
         icon: "wrap",
+        image:
+          "https://res.cloudinary.com/diptsoc4h/image/upload/v1786178466/Design_sans_titre_93_bnucrq.png",
+        imageAlt: "Sacs étirables à couvercle jetable x100 Bayti Pack",
       },
     ],
     advantages: [
