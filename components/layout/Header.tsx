@@ -20,7 +20,6 @@ export default function Header({ locale, dict }: { locale: Locale; dict: Diction
     { href: localizedHref("/contact", locale), label: dict.nav.contact },
   ];
   const homeHref = localizedHref("/", locale);
-  const packsHref = localizedHref("/packs", locale);
 
   return (
     <header className="sticky top-0 z-50 border-b border-black/5 bg-white/90 backdrop-blur">
@@ -65,9 +64,6 @@ export default function Header({ locale, dict }: { locale: Locale; dict: Diction
 
         <div className="flex items-center gap-4">
           <LanguageSwitcher locale={locale} />
-          <Link href={packsHref} className="btn-primary px-6 py-2.5 text-sm">
-            {dict.nav.orderNow}
-          </Link>
         </div>
       </div>
 
@@ -84,9 +80,6 @@ export default function Header({ locale, dict }: { locale: Locale; dict: Diction
                 {link.label}
               </Link>
             ))}
-            <Link href={packsHref} onClick={() => setOpen(false)} className="btn-primary mt-2 w-full">
-              {dict.nav.orderNow}
-            </Link>
           </nav>
         </div>
       )}

@@ -17,6 +17,9 @@ export default function Footer({ locale, dict }: { locale: Locale; dict: Diction
             <img src={LOGO_URL} alt={dict.siteName} className="h-9 w-auto" />
           </Link>
           <p className="mt-4 text-sm leading-relaxed text-neutral-500">{dict.footer.tagline}</p>
+          <Link href={localizedHref("/packs", locale)} className="btn-primary mt-5 px-6 py-2.5 text-sm">
+            {dict.nav.orderNow}
+          </Link>
         </div>
 
         <div>
