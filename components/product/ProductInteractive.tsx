@@ -1,24 +1,16 @@
 "use client";
 
-import { useRef, useState } from "react";
+import { useState } from "react";
 import type { Pack } from "@/types";
 import type { Locale } from "@/lib/i18n";
 import type { Dictionary } from "@/lib/dictionaries";
-import { computeBundleTiers } from "@/lib/pricing";
 import { formatDH } from "@/lib/utils";
 import Gallery from "@/components/product/Gallery";
 import OrderForm from "@/components/product/OrderForm";
 
 export default function ProductInteractive({ pack, locale, dict }: { pack: Pack; locale: Locale; dict: Dictionary }) {
   const [qty, setQty] = useState<1 | 2 | 3>(1);
-  const tiers = computeBundleTiers(pack.price, locale);
-  const selectedTier = tiers[qty - 1];
-  const formRef = useRef<HTMLDivElement>(null);
   const discountPercent = Math.round((1 - pack.price / pack.compareAtPrice) * 100);
-
-  const scrollToForm = () => {
-    formRef.current?.scrollIntoView({ behavior: "smooth", block: "start" });
-  };
 
   return (
     <>
@@ -43,14 +35,10 @@ export default function ProductInteractive({ pack, locale, dict }: { pack: Pack;
           </div>
 
           <p className="mt-5 leading-relaxed text-neutral-600">{pack.description}</p>
-
-          <button onClick={scrollToForm} className="btn-primary mt-8 w-full text-lg">
-            {dict.product.orderNowPrefix}{formatDH(selectedTier.total)}
-          </button>
         </div>
       </div>
 
-      <div ref={formRef} className="mx-auto mt-16 max-w-xl scroll-mt-24">
+      <div className="mx-auto mt-16 max-w-xl">
         <OrderForm pack={pack} locale={locale} dict={dict} qty={qty} setQty={setQty} />
       </div>
     </>
