@@ -27,29 +27,29 @@ export default function BundleSelector({
             type="button"
             onClick={() => onSelect(tier.qty)}
             className={cn(
-              "flex w-full items-center justify-between gap-4 rounded-xl2 border-2 p-4 text-left transition-all duration-200",
+              "flex w-full items-center justify-between gap-3 rounded-xl2 border-2 p-3.5 text-left transition-all duration-200 sm:gap-4 sm:p-4",
               isSelected
                 ? "border-brand bg-brand text-white shadow-lift"
                 : "border-black/10 bg-white text-ink hover:border-brand/50"
             )}
           >
-            <div className="flex items-center gap-3">
+            <div className="flex items-center gap-2.5 sm:gap-3">
               <span
                 className={cn(
-                  "flex h-6 w-6 flex-shrink-0 items-center justify-center rounded-full border-2",
+                  "flex h-5 w-5 flex-shrink-0 items-center justify-center rounded-full border-2 sm:h-6 sm:w-6",
                   isSelected ? "border-white bg-white text-brand-dark" : "border-neutral-300"
                 )}
               >
-                {isSelected && <Check className="h-3.5 w-3.5" strokeWidth={3} />}
+                {isSelected && <Check className="h-3 w-3 sm:h-3.5 sm:w-3.5" strokeWidth={3} />}
               </span>
 
               <div>
-                <div className="flex flex-wrap items-center gap-2">
-                  <span className="font-semibold">{tier.label}</span>
+                <div className="flex flex-wrap items-center gap-1.5">
+                  <span className="text-sm font-semibold sm:text-base">{tier.label}</span>
                   {tier.badge && (
                     <span
                       className={cn(
-                        "rounded-full px-2.5 py-0.5 text-[10px] font-semibold",
+                        "rounded-full px-2 py-0.5 text-[9px] font-semibold",
                         isSelected ? "bg-ink text-white" : "bg-promo text-white"
                       )}
                     >
@@ -57,7 +57,7 @@ export default function BundleSelector({
                     </span>
                   )}
                 </div>
-                <p className={cn("mt-0.5 text-xs", isSelected ? "text-white/80" : "text-neutral-500")}>
+                <p className={cn("mt-0.5 text-[11px] sm:text-xs", isSelected ? "text-white/80" : "text-neutral-500")}>
                   {formatDH(tier.unitPrice)} {perPackLabel}
                   {tier.savings > 0 && ` · ${saveLabel} ${formatDH(tier.savings)}`}
                 </p>
@@ -65,9 +65,9 @@ export default function BundleSelector({
             </div>
 
             <div className="flex-shrink-0 text-right">
-              <span className="block text-lg font-bold">{formatDH(tier.total)}</span>
+              <span className="block text-base font-bold sm:text-lg">{formatDH(tier.total)}</span>
               {tier.qty > 1 && (
-                <span className={cn("text-xs line-through", isSelected ? "text-white/70" : "text-neutral-400")}>
+                <span className={cn("text-[11px] line-through sm:text-xs", isSelected ? "text-white/70" : "text-neutral-400")}>
                   {formatDH(tier.compareTotal)}
                 </span>
               )}
