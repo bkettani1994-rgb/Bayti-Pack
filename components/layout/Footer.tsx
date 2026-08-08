@@ -5,7 +5,7 @@ import { localizedHref } from "@/lib/i18n";
 import type { Dictionary } from "@/lib/dictionaries";
 
 const LOGO_URL =
-  "https://res.cloudinary.com/diptsoc4h/image/upload/v1786179108/ChatGPT_Image_8_ao%C3%BBt_2026_09_51_07_bkntfg.png";
+  "https://res.cloudinary.com/diptsoc4h/image/upload/v1786188183/bayti_pack_logo_white_zpqzth.png";
 
 export default function Footer({ locale, dict }: { locale: Locale; dict: Dictionary }) {
   return (
