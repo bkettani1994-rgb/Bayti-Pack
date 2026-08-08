@@ -102,7 +102,10 @@ export default function OrderForm({
         <p className="text-sm text-red-600">{f.errorMessage}</p>
       )}
 
-      <p className="text-center text-sm font-medium text-brand-dark">{f.freeDelivery}</p>
+      <div className="flex items-center justify-between rounded-lg bg-brand-light px-4 py-3 text-sm">
+        <span className="text-sky-600">{f.freeDelivery.label}</span>
+        <span className="font-semibold text-brand-dark">{f.freeDelivery.value}</span>
+      </div>
 
       <button
         type="submit"

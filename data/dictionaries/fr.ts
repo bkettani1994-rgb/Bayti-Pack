@@ -118,7 +118,7 @@ export const fr: Dictionary = {
       submitting: "Envoi...",
       successHeading: "Commande confirmée !",
       successMessage: "Merci ! Nous vous contactons très vite pour confirmer la livraison. Paiement à la réception.",
-      freeDelivery: "🚚 Livraison gratuite partout au Maroc",
+      freeDelivery: { label: "Frais de livraison", value: "Gratuit" },
     },
     bundle: { perPack: "/ pack", save: "Économisez" },
     comparison: {
