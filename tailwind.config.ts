@@ -30,9 +30,16 @@ const config: Config = {
           "0%, 100%": { transform: "translateY(0px)" },
           "50%": { transform: "translateY(-10px)" },
         },
+        shake: {
+          "0%, 8%, 100%": { transform: "translateX(0)" },
+          "1%, 5%": { transform: "translateX(-5px)" },
+          "2%, 4%, 6%": { transform: "translateX(5px)" },
+          "3%, 7%": { transform: "translateX(-3px)" },
+        },
       },
       animation: {
         float: "float 5s ease-in-out infinite",
+        shake: "shake 3.5s ease-in-out infinite",
       },
       maxWidth: {
         content: "1280px",
