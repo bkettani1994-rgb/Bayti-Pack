@@ -43,7 +43,7 @@ export const packs: Pack[] = [
         name: "Sac étirable couvercle jetable x100",
         icon: "wrap",
         image:
-          "https://res.cloudinary.com/diptsoc4h/image/upload/v1786178466/Design_sans_titre_93_bnucrq.png",
+          "https://res.cloudinary.com/diptsoc4h/image/upload/v1786182518/Design_sans_titre_93_eugcei.png",
         imageAlt: "Sacs étirables à couvercle jetable x100 Bayti Pack",
       },
     ],
