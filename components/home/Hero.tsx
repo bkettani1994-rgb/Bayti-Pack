@@ -1,7 +1,7 @@
 const BANNER_URL =
-  "https://res.cloudinary.com/diptsoc4h/image/upload/v1785919605/ChatGPT_Image_5_ao%C3%BBt_2026_09_40_39_zws2jj.png";
+  "https://res.cloudinary.com/diptsoc4h/image/upload/v1786181529/Banniere-bayti-pack-version-desktop_jtexi0.webp";
 const BANNER_URL_MOBILE =
-  "https://res.cloudinary.com/diptsoc4h/image/upload/v1785921284/ChatGPT_Image_5_ao%C3%BBt_2026_10_14_35_irebgp.png";
+  "https://res.cloudinary.com/diptsoc4h/image/upload/v1786181529/Banniere-bayti-pack-version-mobile_orecux.webp";
 
 export default function Hero() {
   return (
