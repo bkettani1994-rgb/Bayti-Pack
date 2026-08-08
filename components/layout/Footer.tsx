@@ -14,7 +14,7 @@ export default function Footer({ locale, dict }: { locale: Locale; dict: Diction
         <div>
           <Link href={localizedHref("/", locale)} className="flex items-center gap-2 font-bold text-white">
             {/* eslint-disable-next-line @next/next/no-img-element */}
-            <img src={LOGO_URL} alt={dict.siteName} className="h-9 w-auto" />
+            <img src={LOGO_URL} alt={dict.siteName} className="h-14 w-auto" />
           </Link>
           <p className="mt-4 text-sm leading-relaxed text-white/85">{dict.footer.tagline}</p>
           <Link

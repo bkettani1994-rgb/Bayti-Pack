@@ -35,7 +35,7 @@ export default function Header({ locale, dict }: { locale: Locale; dict: Diction
 
         <Link href={homeHref} className="justify-self-center">
           {/* eslint-disable-next-line @next/next/no-img-element */}
-          <img src={LOGO_URL} alt="Bayti Pack" className="h-9 w-auto" />
+          <img src={LOGO_URL} alt="Bayti Pack" className="h-12 w-auto" />
         </Link>
 
         <div className="justify-self-end">
@@ -47,7 +47,7 @@ export default function Header({ locale, dict }: { locale: Locale; dict: Diction
       <div className="container-content hidden h-16 items-center justify-between md:flex">
         <Link href={homeHref} className="flex items-center gap-2 font-bold text-ink">
           {/* eslint-disable-next-line @next/next/no-img-element */}
-          <img src={LOGO_URL} alt="Bayti Pack" className="h-9 w-auto" />
+          <img src={LOGO_URL} alt="Bayti Pack" className="h-12 w-auto" />
         </Link>
 
         <nav className="flex items-center gap-8">
