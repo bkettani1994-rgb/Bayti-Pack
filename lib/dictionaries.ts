@@ -75,6 +75,7 @@ export type Dictionary = {
       submitting: string;
       successHeading: string;
       successMessage: string;
+      freeDelivery: string;
     };
     bundle: { perPack: string; save: string };
     comparison: {

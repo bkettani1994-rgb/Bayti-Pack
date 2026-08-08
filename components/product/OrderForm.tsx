@@ -102,6 +102,8 @@ export default function OrderForm({
         <p className="text-sm text-red-600">{f.errorMessage}</p>
       )}
 
+      <p className="text-center text-sm font-medium text-brand-dark">{f.freeDelivery}</p>
+
       <button
         type="submit"
         disabled={status === "submitting"}

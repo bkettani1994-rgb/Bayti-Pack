@@ -117,6 +117,7 @@ export const ar: Dictionary = {
       submitting: "جارٍ الإرسال...",
       successHeading: "تم تأكيد الطلب!",
       successMessage: "شكراً! سنتصل بكم في أقرب وقت لتأكيد التوصيل. الدفع عند الاستلام.",
+      freeDelivery: "🚚 توصيل مجاني في جميع أنحاء المغرب",
     },
     bundle: { perPack: "/ باقة", save: "وفّروا" },
     comparison: {
