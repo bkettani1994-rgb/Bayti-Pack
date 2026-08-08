@@ -1,16 +1,20 @@
 import { Star } from "lucide-react";
-import { testimonials } from "@/data/testimonials";
+import type { Locale } from "@/lib/i18n";
+import { getTestimonials } from "@/lib/i18n";
+import type { Dictionary } from "@/lib/dictionaries";
 import Reveal from "@/components/shared/Reveal";
 
 const colors = ["bg-brand", "bg-ink", "bg-brand-dark", "bg-neutral-700"];
 
-export default function Testimonials() {
+export default function Testimonials({ locale, dict }: { locale: Locale; dict: Dictionary }) {
+  const testimonials = getTestimonials(locale);
+
   return (
     <section className="bg-neutral-50 py-16 sm:py-24">
       <div className="container-content">
         <Reveal className="mx-auto max-w-2xl text-center">
-          <h2 className="section-title">Avis clients</h2>
-          <p className="section-subtitle">Ce que nos clients disent de Bayti Pack.</p>
+          <h2 className="section-title">{dict.home.testimonials.heading}</h2>
+          <p className="section-subtitle">{dict.home.testimonials.subtitle}</p>
         </Reveal>
 
         <div className="mt-12 grid gap-6 sm:grid-cols-2 lg:grid-cols-4">

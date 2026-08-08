@@ -3,11 +3,11 @@ import type { Pack } from "@/types";
 import { AppIcon } from "@/components/shared/icon-map";
 import Reveal from "@/components/shared/Reveal";
 
-export default function IncludedProducts({ pack }: { pack: Pack }) {
+export default function IncludedProducts({ pack, heading }: { pack: Pack; heading: string }) {
   return (
     <div className="container-content py-14 sm:py-16">
       <Reveal>
-        <h2 className="text-2xl font-bold text-ink sm:text-3xl">Ce que contient ce pack</h2>
+        <h2 className="text-2xl font-bold text-ink sm:text-3xl">{heading}</h2>
       </Reveal>
       <div className="mt-8 grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
         {pack.contents.map((item, i) => (

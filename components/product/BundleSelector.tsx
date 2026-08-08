@@ -8,10 +8,14 @@ export default function BundleSelector({
   tiers,
   selected,
   onSelect,
+  perPackLabel,
+  saveLabel,
 }: {
   tiers: BundleTier[];
   selected: number;
   onSelect: (qty: 1 | 2 | 3) => void;
+  perPackLabel: string;
+  saveLabel: string;
 }) {
   return (
     <div className="space-y-3">
@@ -54,8 +58,8 @@ export default function BundleSelector({
                   )}
                 </div>
                 <p className={cn("mt-0.5 text-xs", isSelected ? "text-white/80" : "text-neutral-500")}>
-                  {formatDH(tier.unitPrice)} / pack
-                  {tier.savings > 0 && ` · Économisez ${formatDH(tier.savings)}`}
+                  {formatDH(tier.unitPrice)} {perPackLabel}
+                  {tier.savings > 0 && ` · ${saveLabel} ${formatDH(tier.savings)}`}
                 </p>
               </div>
             </div>

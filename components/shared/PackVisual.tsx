@@ -9,11 +9,13 @@ export default function PackVisual({
   className,
   compact = false,
   showBadge = true,
+  bestSellerLabel = "Best-seller",
 }: {
   pack: Pack;
   className?: string;
   compact?: boolean;
   showBadge?: boolean;
+  bestSellerLabel?: string;
 }) {
   const chips = pack.contents.slice(0, 4);
   const positions = [
@@ -72,8 +74,8 @@ export default function PackVisual({
       )}
 
       {showBadge && pack.featured && (
-        <span className="absolute left-4 top-4 rounded-full bg-ink px-3 py-1 text-xs font-semibold text-white">
-          ⭐ Best-seller
+        <span className="absolute left-4 top-4 rounded-full bg-ink px-3 py-1 text-xs font-semibold text-white rtl:left-auto rtl:right-4">
+          ⭐ {bestSellerLabel}
         </span>
       )}
     </div>

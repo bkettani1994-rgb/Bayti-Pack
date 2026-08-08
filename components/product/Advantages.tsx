@@ -2,12 +2,12 @@ import type { Pack } from "@/types";
 import { AppIcon } from "@/components/shared/icon-map";
 import Reveal from "@/components/shared/Reveal";
 
-export default function Advantages({ pack }: { pack: Pack }) {
+export default function Advantages({ pack, heading }: { pack: Pack; heading: string }) {
   return (
     <div className="bg-neutral-50 py-14 sm:py-16">
       <div className="container-content">
         <Reveal>
-          <h2 className="text-2xl font-bold text-ink sm:text-3xl">Pourquoi choisir ce pack</h2>
+          <h2 className="text-2xl font-bold text-ink sm:text-3xl">{heading}</h2>
         </Reveal>
         <div className="mt-8 grid gap-6 sm:grid-cols-3">
           {pack.advantages.map((adv, i) => (

@@ -7,10 +7,10 @@ import type { Pack } from "@/types";
 import { AppIcon } from "@/components/shared/icon-map";
 import { cn } from "@/lib/utils";
 
-export default function Gallery({ pack }: { pack: Pack }) {
+export default function Gallery({ pack, overviewLabel }: { pack: Pack; overviewLabel: string }) {
   const [active, setActive] = useState(0);
   const slides = [
-    { label: "Vue d'ensemble", items: pack.contents },
+    { label: overviewLabel, items: pack.contents },
     ...pack.contents.map((item) => ({ label: item.name, items: [item] })),
   ];
   const current = slides[active];

@@ -1,6 +1,8 @@
 import type { Metadata } from "next";
 import { notFound } from "next/navigation";
 import { packs, getPackBySlug } from "@/data/packs";
+import { isLocale, localizedHref, localizePack, type Locale } from "@/lib/i18n";
+import { getDictionary } from "@/lib/dictionaries";
 import ProductInteractive from "@/components/product/ProductInteractive";
 import IncludedProducts from "@/components/product/IncludedProducts";
 import Advantages from "@/components/product/Advantages";
@@ -10,14 +12,17 @@ export function generateStaticParams() {
   return packs.map((pack) => ({ slug: pack.slug }));
 }
 
-export function generateMetadata({ params }: { params: { slug: string } }): Metadata {
-  const pack = getPackBySlug(params.slug);
-  if (!pack) return {};
+export function generateMetadata({ params }: { params: { locale: string; slug: string } }): Metadata {
+  if (!isLocale(params.locale)) return {};
+  const locale: Locale = params.locale;
+  const basePack = getPackBySlug(params.slug);
+  if (!basePack) return {};
+  const pack = localizePack(basePack, locale);
 
   return {
     title: `${pack.name} — ${pack.price} DH`,
     description: pack.description,
-    alternates: { canonical: `/packs/${pack.slug}` },
+    alternates: { canonical: localizedHref(`/packs/${pack.slug}`, locale) },
     openGraph: {
       title: `${pack.name} — ${pack.price} DH`,
       description: pack.description,
@@ -25,9 +30,13 @@ export function generateMetadata({ params }: { params: { slug: string } }): Meta
   };
 }
 
-export default function ProductPage({ params }: { params: { slug: string } }) {
-  const pack = getPackBySlug(params.slug);
-  if (!pack) notFound();
+export default function ProductPage({ params }: { params: { locale: string; slug: string } }) {
+  if (!isLocale(params.locale)) notFound();
+  const locale: Locale = params.locale;
+  const basePack = getPackBySlug(params.slug);
+  if (!basePack) notFound();
+  const pack = localizePack(basePack, locale);
+  const dict = getDictionary(locale);
 
   const jsonLd = {
     "@context": "https://schema.org",
@@ -40,7 +49,7 @@ export default function ProductPage({ params }: { params: { slug: string } }) {
       priceCurrency: "MAD",
       price: pack.price,
       availability: "https://schema.org/InStock",
-      url: `https://www.baytipack.ma/packs/${pack.slug}`,
+      url: `https://www.baytipack.ma${localizedHref(`/packs/${pack.slug}`, locale)}`,
     },
   };
 
@@ -52,12 +61,12 @@ export default function ProductPage({ params }: { params: { slug: string } }) {
       />
 
       <div className="container-content">
-        <ProductInteractive pack={pack} />
+        <ProductInteractive pack={pack} locale={locale} dict={dict} />
       </div>
 
-      <IncludedProducts pack={pack} />
-      <Advantages pack={pack} />
-      <Upsell slug={pack.slug} />
+      <IncludedProducts pack={pack} heading={dict.product.includedHeading} />
+      <Advantages pack={pack} heading={dict.product.whyChooseHeading} />
+      <Upsell slug={pack.slug} locale={locale} dict={dict} />
     </div>
   );
 }

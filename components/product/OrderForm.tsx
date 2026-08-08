@@ -3,20 +3,27 @@
 import { useState, type FormEvent } from "react";
 import { CheckCircle2, Loader2 } from "lucide-react";
 import type { Pack } from "@/types";
+import type { Locale } from "@/lib/i18n";
+import type { Dictionary } from "@/lib/dictionaries";
 import { computeBundleTiers } from "@/lib/pricing";
 import { formatDH } from "@/lib/utils";
 import BundleSelector from "@/components/product/BundleSelector";
 
 export default function OrderForm({
   pack,
+  locale,
+  dict,
   qty,
   setQty,
 }: {
   pack: Pack;
+  locale: Locale;
+  dict: Dictionary;
   qty: 1 | 2 | 3;
   setQty: (qty: 1 | 2 | 3) => void;
 }) {
-  const tiers = computeBundleTiers(pack.price);
+  const f = dict.product.orderForm;
+  const tiers = computeBundleTiers(pack.price, locale);
   const total = tiers[qty - 1].total;
   const [status, setStatus] = useState<"idle" | "submitting" | "success" | "error">("idle");
 
@@ -49,10 +56,8 @@ export default function OrderForm({
     return (
       <div className="rounded-xl2 border border-brand/30 bg-brand-light p-8 text-center">
         <CheckCircle2 className="mx-auto h-12 w-12 text-brand-dark" />
-        <h3 className="mt-4 text-xl font-bold text-ink">Commande confirmée !</h3>
-        <p className="mt-2 text-sm text-neutral-600">
-          Merci ! Nous vous contactons très vite pour confirmer la livraison. Paiement à la réception.
-        </p>
+        <h3 className="mt-4 text-xl font-bold text-ink">{f.successHeading}</h3>
+        <p className="mt-2 text-sm text-neutral-600">{f.successMessage}</p>
       </div>
     );
   }
@@ -60,39 +65,45 @@ export default function OrderForm({
   return (
     <form onSubmit={handleSubmit} className="space-y-5 rounded-xl2 border border-black/5 bg-white p-6 shadow-soft sm:p-8">
       <div>
-        <h3 className="text-xl font-bold text-ink">Passer ma commande</h3>
-        <p className="mt-1 text-sm text-neutral-500">Paiement à la livraison. Aucune carte bancaire requise.</p>
+        <h3 className="text-xl font-bold text-ink">{f.heading}</h3>
+        <p className="mt-1 text-sm text-neutral-500">{f.subtitle}</p>
       </div>
 
       <div>
-        <p className="mb-3 text-sm font-semibold text-ink">Choisissez votre offre</p>
-        <BundleSelector tiers={tiers} selected={qty} onSelect={setQty} />
+        <p className="mb-3 text-sm font-semibold text-ink">{f.offerLabel}</p>
+        <BundleSelector
+          tiers={tiers}
+          selected={qty}
+          onSelect={setQty}
+          perPackLabel={dict.product.bundle.perPack}
+          saveLabel={dict.product.bundle.save}
+        />
       </div>
 
       <div className="grid gap-4 sm:grid-cols-2">
         <div className="sm:col-span-2">
-          <label htmlFor="name" className="mb-1.5 block text-sm font-medium text-ink">Nom complet</label>
-          <input id="name" name="name" required placeholder="Votre nom" className="w-full rounded-lg border border-black/10 px-4 py-3 text-sm outline-none focus:border-brand focus:ring-2 focus:ring-brand/20" />
+          <label htmlFor="name" className="mb-1.5 block text-sm font-medium text-ink">{f.nameLabel}</label>
+          <input id="name" name="name" required placeholder={f.namePlaceholder} className="w-full rounded-lg border border-black/10 px-4 py-3 text-sm outline-none focus:border-brand focus:ring-2 focus:ring-brand/20" />
         </div>
 
         <div>
-          <label htmlFor="phone" className="mb-1.5 block text-sm font-medium text-ink">Téléphone</label>
-          <input id="phone" name="phone" type="tel" required placeholder="06 00 00 00 00" className="w-full rounded-lg border border-black/10 px-4 py-3 text-sm outline-none focus:border-brand focus:ring-2 focus:ring-brand/20" />
+          <label htmlFor="phone" className="mb-1.5 block text-sm font-medium text-ink">{f.phoneLabel}</label>
+          <input id="phone" name="phone" type="tel" required placeholder={f.phonePlaceholder} className="w-full rounded-lg border border-black/10 px-4 py-3 text-sm outline-none focus:border-brand focus:ring-2 focus:ring-brand/20" />
         </div>
 
         <div>
-          <label htmlFor="city" className="mb-1.5 block text-sm font-medium text-ink">Ville</label>
-          <input id="city" name="city" required placeholder="Casablanca" className="w-full rounded-lg border border-black/10 px-4 py-3 text-sm outline-none focus:border-brand focus:ring-2 focus:ring-brand/20" />
+          <label htmlFor="city" className="mb-1.5 block text-sm font-medium text-ink">{f.cityLabel}</label>
+          <input id="city" name="city" required placeholder={f.cityPlaceholder} className="w-full rounded-lg border border-black/10 px-4 py-3 text-sm outline-none focus:border-brand focus:ring-2 focus:ring-brand/20" />
         </div>
 
         <div className="sm:col-span-2">
-          <label htmlFor="address" className="mb-1.5 block text-sm font-medium text-ink">Adresse</label>
-          <input id="address" name="address" required placeholder="Rue, quartier, ville" className="w-full rounded-lg border border-black/10 px-4 py-3 text-sm outline-none focus:border-brand focus:ring-2 focus:ring-brand/20" />
+          <label htmlFor="address" className="mb-1.5 block text-sm font-medium text-ink">{f.addressLabel}</label>
+          <input id="address" name="address" required placeholder={f.addressPlaceholder} className="w-full rounded-lg border border-black/10 px-4 py-3 text-sm outline-none focus:border-brand focus:ring-2 focus:ring-brand/20" />
         </div>
       </div>
 
       {status === "error" && (
-        <p className="text-sm text-red-600">Une erreur est survenue, veuillez réessayer.</p>
+        <p className="text-sm text-red-600">{f.errorMessage}</p>
       )}
 
       <button
@@ -102,10 +113,10 @@ export default function OrderForm({
       >
         {status === "submitting" ? (
           <>
-            <Loader2 className="h-5 w-5 animate-spin" /> Envoi...
+            <Loader2 className="h-5 w-5 animate-spin" /> {f.submitting}
           </>
         ) : (
-          `Confirmer ma commande — ${formatDH(total)}`
+          `${dict.product.confirmPrefix}${formatDH(total)}`
         )}
       </button>
     </form>

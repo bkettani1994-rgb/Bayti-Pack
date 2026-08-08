@@ -2,14 +2,16 @@
 
 import { useRef, useState } from "react";
 import type { Pack } from "@/types";
+import type { Locale } from "@/lib/i18n";
+import type { Dictionary } from "@/lib/dictionaries";
 import { computeBundleTiers } from "@/lib/pricing";
 import { formatDH } from "@/lib/utils";
 import Gallery from "@/components/product/Gallery";
 import OrderForm from "@/components/product/OrderForm";
 
-export default function ProductInteractive({ pack }: { pack: Pack }) {
+export default function ProductInteractive({ pack, locale, dict }: { pack: Pack; locale: Locale; dict: Dictionary }) {
   const [qty, setQty] = useState<1 | 2 | 3>(1);
-  const tiers = computeBundleTiers(pack.price);
+  const tiers = computeBundleTiers(pack.price, locale);
   const selectedTier = tiers[qty - 1];
   const formRef = useRef<HTMLDivElement>(null);
   const discountPercent = Math.round((1 - pack.price / pack.compareAtPrice) * 100);
@@ -21,12 +23,12 @@ export default function ProductInteractive({ pack }: { pack: Pack }) {
   return (
     <>
       <div className="grid gap-10 lg:grid-cols-2 lg:gap-14">
-        <Gallery pack={pack} />
+        <Gallery pack={pack} overviewLabel={dict.product.overview} />
 
         <div>
           {pack.featured && (
             <span className="inline-block rounded-full bg-ink px-3 py-1 text-xs font-semibold text-white">
-              ⭐ Best-seller
+              ⭐ {dict.product.bestSeller}
             </span>
           )}
           <h1 className="mt-3 text-3xl font-bold tracking-tight text-ink sm:text-4xl">{pack.name}</h1>
@@ -43,13 +45,13 @@ export default function ProductInteractive({ pack }: { pack: Pack }) {
           <p className="mt-5 leading-relaxed text-neutral-600">{pack.description}</p>
 
           <button onClick={scrollToForm} className="btn-primary mt-8 w-full text-lg">
-            Commander maintenant — {formatDH(selectedTier.total)}
+            {dict.product.orderNowPrefix}{formatDH(selectedTier.total)}
           </button>
         </div>
       </div>
 
       <div ref={formRef} className="mx-auto mt-16 max-w-xl scroll-mt-24">
-        <OrderForm pack={pack} qty={qty} setQty={setQty} />
+        <OrderForm pack={pack} locale={locale} dict={dict} qty={qty} setQty={setQty} />
       </div>
     </>
   );
