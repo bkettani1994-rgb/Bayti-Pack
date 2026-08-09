@@ -5,9 +5,11 @@ automatiquement dans une feuille Google Sheets, avec :
 
 - toutes les informations de la commande (nom, téléphone, ville, adresse, pack, quantité, total),
 - la **langue choisie** par le client pendant la commande (français ou arabe),
-- un **lien WhatsApp** prêt à l'emploi vers le **+212661793619**, avec un message
-  pré-rempli contenant tous les détails de la commande (il suffit de cliquer dessus
-  pour ouvrir WhatsApp avec le message déjà écrit).
+- un **lien WhatsApp** prêt à l'emploi vers le **numéro du client** (celui qu'il a
+  renseigné dans le formulaire), avec un message de remerciement, le récapitulatif
+  de sa commande, et une demande de confirmation par réponse — dans la langue
+  qu'il a choisie pendant sa commande. Il suffit de cliquer sur le lien pour ouvrir
+  WhatsApp avec ce message déjà écrit, prêt à envoyer.
 
 ## 1. Créer la feuille Google Sheets
 

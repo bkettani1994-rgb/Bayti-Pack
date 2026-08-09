@@ -5,7 +5,6 @@
  */
 
 var SHEET_NAME = "Commandes";
-var WHATSAPP_NUMBER = "212661793619"; // format international, sans le "+"
 
 function doPost(e) {
   var result = { ok: true };
@@ -14,6 +13,7 @@ function doPost(e) {
     var data = JSON.parse(e.postData.contents);
     var sheet = getOrCreateSheet_();
 
+    var localeCode = data.locale === "ar" ? "ar" : "fr";
     var order = {
       name: data.name || "",
       phone: data.phone || "",
@@ -22,10 +22,10 @@ function doPost(e) {
       packName: data.packName || "",
       quantity: data.quantity || "",
       total: data.total || "",
-      locale: data.locale === "ar" ? "Arabe" : "Français",
+      localeLabel: localeCode === "ar" ? "Arabe" : "Français",
     };
 
-    var whatsappLink = buildWhatsAppLink_(order);
+    var whatsappLink = buildWhatsAppLink_(order, localeCode);
 
     sheet.appendRow([
       new Date(),
@@ -36,7 +36,7 @@ function doPost(e) {
       order.packName,
       order.quantity,
       order.total,
-      order.locale,
+      order.localeLabel,
       whatsappLink,
     ]);
   } catch (err) {
@@ -48,21 +48,68 @@ function doPost(e) {
     .setMimeType(ContentService.MimeType.JSON);
 }
 
-function buildWhatsAppLink_(order) {
-  var message = [
-    "🛒 Nouvelle commande Bayti Pack",
-    "",
-    "Nom : " + order.name,
-    "Téléphone : " + order.phone,
-    "Ville : " + order.city,
-    "Adresse : " + order.address,
-    "Pack : " + order.packName,
-    "Quantité : " + order.quantity,
-    "Total : " + order.total + " DH",
-    "Langue choisie : " + order.locale,
-  ].join("\n");
+/**
+ * Construit le lien WhatsApp vers le numéro du CLIENT (celui qui a
+ * passé la commande), avec un message de remerciement + le récapitulatif
+ * de la commande + une demande de confirmation par message.
+ */
+function buildWhatsAppLink_(order, localeCode) {
+  var message = localeCode === "ar"
+    ? buildArabicMessage_(order)
+    : buildFrenchMessage_(order);
 
-  return "https://wa.me/" + WHATSAPP_NUMBER + "?text=" + encodeURIComponent(message);
+  var phone = normalizePhone_(order.phone);
+  return "https://wa.me/" + phone + "?text=" + encodeURIComponent(message);
+}
+
+function buildFrenchMessage_(order) {
+  return [
+    "Bonjour " + order.name + " 👋",
+    "",
+    "Merci d'avoir commandé chez Bayti Pack ! 🎉",
+    "",
+    "📦 Récapitulatif de votre commande :",
+    "- Pack : " + order.packName,
+    "- Quantité : " + order.quantity,
+    "- Total : " + order.total + " DH",
+    "- Ville : " + order.city,
+    "- Adresse : " + order.address,
+    "",
+    "Merci de confirmer votre commande en répondant simplement OUI à ce message ✅",
+  ].join("\n");
+}
+
+function buildArabicMessage_(order) {
+  return [
+    "مرحباً " + order.name + " 👋",
+    "",
+    "شكراً لكم على طلبكم من Bayti Pack! 🎉",
+    "",
+    "📦 ملخص طلبكم:",
+    "- الباقة: " + order.packName,
+    "- الكمية: " + order.quantity,
+    "- المجموع: " + order.total + " درهم",
+    "- المدينة: " + order.city,
+    "- العنوان: " + order.address,
+    "",
+    "يرجى تأكيد طلبكم بالرد بـ نعم على هذه الرسالة ✅",
+  ].join("\n");
+}
+
+/**
+ * Normalise un numéro marocain vers le format international attendu
+ * par wa.me (sans "+", sans espaces). Ex : "06 00 00 00 00" -> "212600000000".
+ */
+function normalizePhone_(phone) {
+  var digits = String(phone).replace(/\D/g, "");
+
+  if (digits.charAt(0) === "0") {
+    return "212" + digits.slice(1);
+  }
+  if (digits.indexOf("212") === 0) {
+    return digits;
+  }
+  return digits;
 }
 
 function getOrCreateSheet_() {
