@@ -6,7 +6,7 @@ export const fr: Dictionary = {
   siteDefaultDescription:
     "Tous les indispensables de votre cuisine réunis dans des packs économiques. Papier aluminium, film alimentaire, sacs congélation et plus. Livraison rapide, paiement à la livraison.",
   announcement: [
-    "⭐ 4 essentiels de cuisine réunis dans 1 seul pack",
+    "⭐ 5 essentiels de cuisine réunis dans 1 seul pack",
     "💰 Plus de mètres, moins de dépenses !",
     "🏠 Acheté 1 fois, tranquille pour longtemps",
     "🔥 Le pack malin pour une cuisine toujours prête !",
@@ -152,8 +152,8 @@ export const fr: Dictionary = {
             "Bien sûr, choisissez directement l'offre x2 ou x3 sur le formulaire de commande pour bénéficier d'un tarif dégressif.",
         },
         {
-          question: "Les 4 produits sont-ils livrés ensemble ?",
-          answer: "Oui, les 4 produits du pack sont emballés et livrés ensemble en une seule fois.",
+          question: "Les 5 produits sont-ils livrés ensemble ?",
+          answer: "Oui, les 5 produits du pack sont emballés et livrés ensemble en une seule fois.",
         },
         {
           question: "Que faire si un produit est manquant ou endommagé ?",
@@ -191,13 +191,13 @@ export const fr: Dictionary = {
     home: {
       title: "Packs d'accessoires de cuisine indispensables au quotidien",
       description:
-        "Tous les indispensables de votre cuisine réunis dans des packs économiques dès 89 DH. Livraison rapide partout au Maroc, paiement à la livraison.",
-      ogDescription: "Gagnez du temps, économisez de l'argent et recevez tout chez vous. Découvrez nos packs cuisine dès 89 DH.",
+        "Tous les indispensables de votre cuisine réunis dans un pack économique à 169 DH. Livraison rapide partout au Maroc, paiement à la livraison.",
+      ogDescription: "Gagnez du temps, économisez de l'argent et recevez tout chez vous. Découvrez notre pack cuisine à 169 DH.",
     },
     catalogue: {
       title: "Catalogue des packs cuisine",
       description:
-        "Découvrez le Pack Cuisine Essentielle : papier aluminium, film alimentaire, papier cuisson et sacs étirables à couvercle jetable. Dès 99 DH, livraison rapide.",
+        "Découvrez le Pack Cuisine Essentielle : papier aluminium, film alimentaire, papier cuisson, sacs étirables à couvercle jetable et sacs poubelle bleus 30L. À 169 DH, livraison rapide.",
     },
     contact: {
       title: "Contact",

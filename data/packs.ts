@@ -6,17 +6,17 @@ export const packs: Pack[] = [
     name: "Pack Cuisine Essentielle",
     shortName: "Cuisine Essentielle",
     tagline: "Le pack star pour démarrer",
-    price: 99,
-    compareAtPrice: 149,
-    itemsCount: 4,
+    price: 169,
+    compareAtPrice: 219,
+    itemsCount: 5,
     thumbnail:
-      "https://res.cloudinary.com/diptsoc4h/image/upload/v1786178467/Gemini_Generated_Image_a5cup3a5cup3a5cu_kusg5m.png",
+      "https://res.cloudinary.com/diptsoc4h/image/upload/v1786303394/ChatGPT_Image_9_ao%C3%BBt_2026_20_22_33_delvho.png",
     mainImage:
-      "https://res.cloudinary.com/diptsoc4h/image/upload/v1786178467/Gemini_Generated_Image_a5cup3a5cup3a5cu_kusg5m.png",
+      "https://res.cloudinary.com/diptsoc4h/image/upload/v1786303394/ChatGPT_Image_9_ao%C3%BBt_2026_20_22_33_delvho.png",
     imageAlt:
-      "Pack Cuisine Essentielle Bayti Pack complet avec papier aluminium, film alimentaire, papier cuisson et sacs étirables jetables",
+      "Pack Cuisine Essentielle Bayti Pack complet avec papier aluminium, film alimentaire, papier cuisson, sacs étirables jetables et sacs poubelle bleus 30L",
     description:
-      "Le pack indispensable pour équiper votre cuisine au quotidien. Papier aluminium, film alimentaire, papier cuisson et sacs étirables à couvercle jetable : tout ce qu'il faut pour cuisiner, conserver et emballer sans jamais tomber en rupture.",
+      "Le pack indispensable pour équiper votre cuisine au quotidien. Papier aluminium, film alimentaire, papier cuisson, sacs étirables à couvercle jetable et sacs poubelle bleus 30L : tout ce qu'il faut pour cuisiner, conserver, emballer et jeter sans jamais tomber en rupture.",
     contents: [
       {
         name: "Papier Aluminium 60 mètres",
@@ -46,11 +46,16 @@ export const packs: Pack[] = [
           "https://res.cloudinary.com/diptsoc4h/image/upload/v1786182518/Design_sans_titre_93_eugcei.png",
         imageAlt: "Sacs étirables à couvercle jetable x100 Bayti Pack",
       },
+      {
+        name: "Sacs poubelle bleus 30L x40",
+        icon: "zipBag",
+        imageAlt: "Sacs poubelle bleus 30 litres x40 Bayti Pack",
+      },
     ],
     advantages: [
       {
         title: "Le plus complet",
-        description: "4 produits essentiels réunis pour couvrir tous vos besoins de base en cuisine.",
+        description: "5 produits essentiels réunis pour couvrir tous vos besoins de base en cuisine.",
         icon: "package",
       },
       {
