@@ -73,8 +73,6 @@ export type Dictionary = {
       addressPlaceholder: string;
       errorMessage: string;
       submitting: string;
-      successHeading: string;
-      successMessage: string;
       freeDelivery: { label: string; value: string };
     };
     bundle: { perPack: string; save: string };
@@ -110,6 +108,19 @@ export type Dictionary = {
     };
   };
   notFound: { title: string; message: string; backHome: string };
+  thankYou: {
+    heading: string;
+    message: string;
+    recapHeading: string;
+    packLabel: string;
+    quantityLabel: string;
+    totalLabel: string;
+    nameLabel: string;
+    phoneLabel: string;
+    cityLabel: string;
+    addressLabel: string;
+    backHome: string;
+  };
   pages: {
     home: { title: string; description: string; ogDescription: string };
     catalogue: { title: string; description: string };
@@ -117,6 +128,7 @@ export type Dictionary = {
     privacy: { title: string; description: string };
     terms: { title: string; description: string };
     shipping: { title: string; description: string };
+    thankYou: { title: string; description: string };
   };
   siteName: string;
   siteDefaultTitle: string;

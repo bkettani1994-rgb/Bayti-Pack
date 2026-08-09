@@ -1,9 +1,10 @@
 "use client";
 
 import { useState, type FormEvent } from "react";
-import { CheckCircle2, Loader2 } from "lucide-react";
+import { useRouter } from "next/navigation";
+import { Loader2 } from "lucide-react";
 import type { Pack } from "@/types";
-import type { Locale } from "@/lib/i18n";
+import { localizedHref, type Locale } from "@/lib/i18n";
 import type { Dictionary } from "@/lib/dictionaries";
 import { computeBundleTiers } from "@/lib/pricing";
 import { formatDH } from "@/lib/utils";
@@ -25,42 +26,47 @@ export default function OrderForm({
   const f = dict.product.orderForm;
   const tiers = computeBundleTiers(pack.price, locale);
   const total = tiers[qty - 1].total;
-  const [status, setStatus] = useState<"idle" | "submitting" | "success" | "error">("idle");
+  const [status, setStatus] = useState<"idle" | "submitting" | "error">("idle");
+  const router = useRouter();
 
   async function handleSubmit(e: FormEvent<HTMLFormElement>) {
     e.preventDefault();
     setStatus("submitting");
     const form = new FormData(e.currentTarget);
+    const name = String(form.get("name") ?? "");
+    const phone = String(form.get("phone") ?? "");
+    const city = String(form.get("city") ?? "");
+    const address = String(form.get("address") ?? "");
 
     try {
       const res = await fetch("/api/orders", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({
-          name: form.get("name"),
-          phone: form.get("phone"),
-          city: form.get("city"),
-          address: form.get("address"),
+          name,
+          phone,
+          city,
+          address,
           packSlug: pack.slug,
           quantity: qty,
           locale,
         }),
       });
       if (!res.ok) throw new Error("failed");
-      setStatus("success");
+
+      const params = new URLSearchParams({
+        packSlug: pack.slug,
+        quantity: String(qty),
+        total: String(total),
+        name,
+        phone,
+        city,
+        address,
+      });
+      router.push(`${localizedHref("/merci", locale)}?${params.toString()}`);
     } catch {
       setStatus("error");
     }
-  }
-
-  if (status === "success") {
-    return (
-      <div className="rounded-xl2 border border-brand/30 bg-brand-light p-8 text-center">
-        <CheckCircle2 className="mx-auto h-12 w-12 text-brand-dark" />
-        <h3 className="mt-4 text-xl font-bold text-ink">{f.successHeading}</h3>
-        <p className="mt-2 text-sm text-neutral-600">{f.successMessage}</p>
-      </div>
-    );
   }
 
   return (

@@ -116,8 +116,6 @@ export const fr: Dictionary = {
       addressPlaceholder: "Rue, quartier, ville",
       errorMessage: "Une erreur est survenue, veuillez réessayer.",
       submitting: "Envoi...",
-      successHeading: "Commande confirmée !",
-      successMessage: "Merci ! Nous vous contactons très vite pour confirmer la livraison. Paiement à la réception.",
       freeDelivery: { label: "Frais de livraison", value: "Gratuit" },
     },
     bundle: { perPack: "/ pack", save: "Économisez" },
@@ -187,6 +185,19 @@ export const fr: Dictionary = {
     message: "Cette page n'existe pas ou n'est plus disponible.",
     backHome: "Retour à l'accueil",
   },
+  thankYou: {
+    heading: "Commande confirmée !",
+    message: "Merci ! Nous vous contactons très vite pour confirmer la livraison. Paiement à la réception.",
+    recapHeading: "Récapitulatif de votre commande",
+    packLabel: "Pack",
+    quantityLabel: "Quantité",
+    totalLabel: "Total",
+    nameLabel: "Nom",
+    phoneLabel: "Téléphone",
+    cityLabel: "Ville",
+    addressLabel: "Adresse",
+    backHome: "Retour à l'accueil",
+  },
   pages: {
     home: {
       title: "Packs d'accessoires de cuisine indispensables au quotidien",
@@ -202,6 +213,10 @@ export const fr: Dictionary = {
     contact: {
       title: "Contact",
       description: "Contactez l'équipe Bayti Pack pour toute question sur nos packs, vos commandes ou la livraison.",
+    },
+    thankYou: {
+      title: "Commande confirmée",
+      description: "Votre commande Bayti Pack a bien été enregistrée.",
     },
     privacy: {
       title: "Politique de confidentialité",

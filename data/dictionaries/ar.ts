@@ -115,8 +115,6 @@ export const ar: Dictionary = {
       addressPlaceholder: "الشارع، الحي، المدينة",
       errorMessage: "حدث خطأ، يرجى المحاولة مرة أخرى.",
       submitting: "جارٍ الإرسال...",
-      successHeading: "تم تأكيد الطلب!",
-      successMessage: "شكراً! سنتصل بكم في أقرب وقت لتأكيد التوصيل. الدفع عند الاستلام.",
       freeDelivery: { label: "رسوم التوصيل", value: "مجاني" },
     },
     bundle: { perPack: "/ باقة", save: "وفّروا" },
@@ -184,6 +182,19 @@ export const ar: Dictionary = {
     message: "هذه الصفحة غير موجودة أو لم تعد متوفرة.",
     backHome: "العودة إلى الرئيسية",
   },
+  thankYou: {
+    heading: "تم تأكيد الطلب!",
+    message: "شكراً! سنتصل بكم في أقرب وقت لتأكيد التوصيل. الدفع عند الاستلام.",
+    recapHeading: "ملخص طلبكم",
+    packLabel: "الباقة",
+    quantityLabel: "الكمية",
+    totalLabel: "المجموع",
+    nameLabel: "الاسم",
+    phoneLabel: "الهاتف",
+    cityLabel: "المدينة",
+    addressLabel: "العنوان",
+    backHome: "العودة إلى الرئيسية",
+  },
   pages: {
     home: {
       title: "باقات أساسية لأدوات المطبخ اليومية",
@@ -195,6 +206,10 @@ export const ar: Dictionary = {
       title: "كتالوج باقات المطبخ",
       description:
         "اكتشفوا باقة المطبخ الأساسية: ورق ألومنيوم، فيلم غذائي، ورق خبز، أكياس غطاء مطاطية قابلة للاستعمال مرة واحدة وأكياس قمامة زرقاء 30 لتر. بسعر 169 درهم، توصيل سريع.",
+    },
+    thankYou: {
+      title: "تم تأكيد الطلب",
+      description: "تم تسجيل طلبكم من Bayti Pack بنجاح.",
     },
     contact: {
       title: "اتصل بنا",
