@@ -10,9 +10,9 @@ export const packs: Pack[] = [
     compareAtPrice: 219,
     itemsCount: 5,
     thumbnail:
-      "https://res.cloudinary.com/diptsoc4h/image/upload/v1786303394/ChatGPT_Image_9_ao%C3%BBt_2026_20_22_33_delvho.png",
+      "https://res.cloudinary.com/diptsoc4h/image/upload/v1786303583/ChatGPT_Image_9_ao%C3%BBt_2026_20_22_33_c8fvnj.png",
     mainImage:
-      "https://res.cloudinary.com/diptsoc4h/image/upload/v1786303394/ChatGPT_Image_9_ao%C3%BBt_2026_20_22_33_delvho.png",
+      "https://res.cloudinary.com/diptsoc4h/image/upload/v1786303583/ChatGPT_Image_9_ao%C3%BBt_2026_20_22_33_c8fvnj.png",
     imageAlt:
       "Pack Cuisine Essentielle Bayti Pack complet avec papier aluminium, film alimentaire, papier cuisson, sacs étirables jetables et sacs poubelle bleus 30L",
     description:
