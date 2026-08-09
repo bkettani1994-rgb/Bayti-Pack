@@ -49,6 +49,8 @@ export const packs: Pack[] = [
       {
         name: "Sacs poubelle bleus 30L x40",
         icon: "zipBag",
+        image:
+          "https://res.cloudinary.com/diptsoc4h/image/upload/v1786304320/ChatGPT_Image_9_ao%C3%BBt_2026_20_35_45_haeg3q.webp",
         imageAlt: "Sacs poubelle bleus 30 litres x40 Bayti Pack",
       },
     ],
