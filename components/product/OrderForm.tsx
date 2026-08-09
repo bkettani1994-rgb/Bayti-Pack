@@ -43,6 +43,7 @@ export default function OrderForm({
           address: form.get("address"),
           packSlug: pack.slug,
           quantity: qty,
+          locale,
         }),
       });
       if (!res.ok) throw new Error("failed");
