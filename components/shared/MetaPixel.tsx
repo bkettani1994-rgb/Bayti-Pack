@@ -3,8 +3,7 @@
 import { useEffect } from "react";
 import { usePathname } from "next/navigation";
 import Script from "next/script";
-
-const META_PIXEL_ID = "1780866623109418";
+import { META_PIXEL_ID } from "@/lib/meta-pixel";
 
 declare global {
   interface Window {

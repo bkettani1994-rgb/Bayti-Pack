@@ -48,6 +48,7 @@ export default function ThankYouPage({
   const phone = get("phone");
   const city = get("city");
   const address = get("address");
+  const eventId = get("eventId");
 
   const recapRows = [
     pack && { label: t.packLabel, value: pack.name },
@@ -61,7 +62,7 @@ export default function ThankYouPage({
 
   return (
     <div className="container-content py-16 sm:py-24">
-      {total && <PurchaseEvent value={Number(total)} />}
+      {total && <PurchaseEvent value={Number(total)} eventId={eventId} />}
 
       <div className="mx-auto max-w-lg text-center">
         <Reveal>

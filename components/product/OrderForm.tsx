@@ -37,6 +37,7 @@ export default function OrderForm({
     const phone = String(form.get("phone") ?? "");
     const city = String(form.get("city") ?? "");
     const address = String(form.get("address") ?? "");
+    const eventId = crypto.randomUUID();
 
     try {
       const res = await fetch("/api/orders", {
@@ -50,6 +51,7 @@ export default function OrderForm({
           packSlug: pack.slug,
           quantity: qty,
           locale,
+          eventId,
         }),
       });
       if (!res.ok) throw new Error("failed");
@@ -62,6 +64,7 @@ export default function OrderForm({
         phone,
         city,
         address,
+        eventId,
       });
       router.push(`${localizedHref("/merci", locale)}?${params.toString()}`);
     } catch {
