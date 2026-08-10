@@ -44,15 +44,15 @@ export default function ContactForm({ dict }: { dict: Dictionary }) {
     <form onSubmit={handleSubmit} className="space-y-4 rounded-xl2 border border-black/5 bg-white p-6 shadow-soft sm:p-8">
       <div>
         <label htmlFor="name" className="mb-1.5 block text-sm font-medium text-ink">{f.nameLabel}</label>
-        <input id="name" name="name" required className="w-full rounded-lg border border-black/10 px-4 py-3 text-sm outline-none focus:border-brand focus:ring-2 focus:ring-brand/20" />
+        <input id="name" name="name" required className="w-full rounded-lg border border-black/10 px-4 py-3 text-base outline-none focus:border-brand focus:ring-2 focus:ring-brand/20" />
       </div>
       <div>
         <label htmlFor="email" className="mb-1.5 block text-sm font-medium text-ink">{f.emailLabel}</label>
-        <input id="email" name="email" type="email" required className="w-full rounded-lg border border-black/10 px-4 py-3 text-sm outline-none focus:border-brand focus:ring-2 focus:ring-brand/20" />
+        <input id="email" name="email" type="email" required className="w-full rounded-lg border border-black/10 px-4 py-3 text-base outline-none focus:border-brand focus:ring-2 focus:ring-brand/20" />
       </div>
       <div>
         <label htmlFor="message" className="mb-1.5 block text-sm font-medium text-ink">{f.messageLabel}</label>
-        <textarea id="message" name="message" rows={5} required className="w-full rounded-lg border border-black/10 px-4 py-3 text-sm outline-none focus:border-brand focus:ring-2 focus:ring-brand/20" />
+        <textarea id="message" name="message" rows={5} required className="w-full rounded-lg border border-black/10 px-4 py-3 text-base outline-none focus:border-brand focus:ring-2 focus:ring-brand/20" />
       </div>
 
       {status === "error" && <p className="text-sm text-red-600">{f.error}</p>}

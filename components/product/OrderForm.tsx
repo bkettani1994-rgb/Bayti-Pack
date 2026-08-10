@@ -86,22 +86,22 @@ export default function OrderForm({
       <div className="grid gap-4 sm:grid-cols-2">
         <div className="sm:col-span-2">
           <label htmlFor="name" className="mb-1.5 block text-sm font-medium text-ink">{f.nameLabel}</label>
-          <input id="name" name="name" required placeholder={f.namePlaceholder} className="w-full rounded-lg border border-black/10 px-4 py-3 text-sm outline-none focus:border-brand focus:ring-2 focus:ring-brand/20" />
+          <input id="name" name="name" required placeholder={f.namePlaceholder} className="w-full rounded-lg border border-black/10 px-4 py-3 text-base outline-none focus:border-brand focus:ring-2 focus:ring-brand/20" />
         </div>
 
         <div>
           <label htmlFor="phone" className="mb-1.5 block text-sm font-medium text-ink">{f.phoneLabel}</label>
-          <input id="phone" name="phone" type="tel" required placeholder={f.phonePlaceholder} className="w-full rounded-lg border border-black/10 px-4 py-3 text-sm outline-none focus:border-brand focus:ring-2 focus:ring-brand/20" />
+          <input id="phone" name="phone" type="tel" required placeholder={f.phonePlaceholder} className="w-full rounded-lg border border-black/10 px-4 py-3 text-base outline-none focus:border-brand focus:ring-2 focus:ring-brand/20" />
         </div>
 
         <div>
           <label htmlFor="city" className="mb-1.5 block text-sm font-medium text-ink">{f.cityLabel}</label>
-          <input id="city" name="city" required placeholder={f.cityPlaceholder} className="w-full rounded-lg border border-black/10 px-4 py-3 text-sm outline-none focus:border-brand focus:ring-2 focus:ring-brand/20" />
+          <input id="city" name="city" required placeholder={f.cityPlaceholder} className="w-full rounded-lg border border-black/10 px-4 py-3 text-base outline-none focus:border-brand focus:ring-2 focus:ring-brand/20" />
         </div>
 
         <div className="sm:col-span-2">
           <label htmlFor="address" className="mb-1.5 block text-sm font-medium text-ink">{f.addressLabel}</label>
-          <input id="address" name="address" required placeholder={f.addressPlaceholder} className="w-full rounded-lg border border-black/10 px-4 py-3 text-sm outline-none focus:border-brand focus:ring-2 focus:ring-brand/20" />
+          <input id="address" name="address" required placeholder={f.addressPlaceholder} className="w-full rounded-lg border border-black/10 px-4 py-3 text-base outline-none focus:border-brand focus:ring-2 focus:ring-brand/20" />
         </div>
       </div>
 
