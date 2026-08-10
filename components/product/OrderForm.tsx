@@ -117,7 +117,7 @@ export default function OrderForm({
       <button
         type="submit"
         disabled={status === "submitting"}
-        className="btn-primary w-full !px-2 !text-[11px] animate-shake disabled:animate-none disabled:opacity-70 sm:!px-8 sm:!text-sm"
+        className="btn-primary w-full !px-3 !text-sm animate-shake disabled:animate-none disabled:opacity-70"
       >
         {status === "submitting" ? (
           <>
