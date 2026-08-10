@@ -7,6 +7,7 @@ import { isLocale, localizedHref, localizePack, type Locale } from "@/lib/i18n";
 import { getDictionary } from "@/lib/dictionaries";
 import { formatDH } from "@/lib/utils";
 import Reveal from "@/components/shared/Reveal";
+import PurchaseEvent from "@/components/shared/PurchaseEvent";
 
 export function generateMetadata({ params }: { params: { locale: string } }): Metadata {
   if (!isLocale(params.locale)) return {};
@@ -60,6 +61,8 @@ export default function ThankYouPage({
 
   return (
     <div className="container-content py-16 sm:py-24">
+      {total && <PurchaseEvent value={Number(total)} />}
+
       <div className="mx-auto max-w-lg text-center">
         <Reveal>
           <CheckCircle2 className="mx-auto h-16 w-16 text-brand-dark" />

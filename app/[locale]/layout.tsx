@@ -5,6 +5,7 @@ import "../globals.css";
 import AnnouncementBar from "@/components/layout/AnnouncementBar";
 import Header from "@/components/layout/Header";
 import Footer from "@/components/layout/Footer";
+import MetaPixel from "@/components/shared/MetaPixel";
 import { locales, isLocale, type Locale } from "@/lib/i18n";
 import { getDictionary } from "@/lib/dictionaries";
 import { cn } from "@/lib/utils";
@@ -81,6 +82,7 @@ export default function LocaleLayout({
   return (
     <html lang={locale} dir={locale === "ar" ? "rtl" : "ltr"} className={cn(inter.variable, cairo.variable)}>
       <body className={cn("flex min-h-screen flex-col antialiased", locale === "ar" ? "font-arabic" : "font-sans")}>
+        <MetaPixel />
         <AnnouncementBar messages={dict.announcement} />
         <Header locale={locale} dict={dict} />
         <main className="flex-1">{children}</main>
