@@ -33,11 +33,11 @@ export const packs: Pack[] = [
         imageAlt: "Rouleau de film alimentaire étirable 100 mètres Bayti Pack",
       },
       {
-        name: "Papier cuisson 40 mètres",
+        name: "Papier cuisson 20 mètres",
         icon: "parchment",
         image:
           "https://res.cloudinary.com/diptsoc4h/image/upload/v1786178466/Design_sans_titre_91_vwiuap.png",
-        imageAlt: "Rouleau de papier cuisson sulfurisé 40 mètres Bayti Pack",
+        imageAlt: "Rouleau de papier cuisson sulfurisé 20 mètres Bayti Pack",
       },
       {
         name: "Sac étirable couvercle jetable x100",

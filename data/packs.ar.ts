@@ -20,7 +20,7 @@ export const arPackContent: Record<string, ArPackContent> = {
     contents: [
       { name: "ورق ألومنيوم 60 متر", imageAlt: "لفافة ورق الألومنيوم الغذائي 60 متر Bayti Pack" },
       { name: "فيلم غذائي 100 متر", imageAlt: "لفافة الفيلم الغذائي المطاطي 100 متر Bayti Pack" },
-      { name: "ورق خبز 40 متر", imageAlt: "لفافة ورق الخبز 40 متر Bayti Pack" },
+      { name: "ورق خبز 20 متر", imageAlt: "لفافة ورق الخبز 20 متر Bayti Pack" },
       {
         name: "أكياس غطاء مطاطية قابلة للاستعمال مرة واحدة × 100",
         imageAlt: "أكياس الغطاء المطاطية القابلة للاستعمال مرة واحدة × 100 Bayti Pack",

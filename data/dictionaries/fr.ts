@@ -142,7 +142,7 @@ export const fr: Dictionary = {
         {
           question: "Les rouleaux sont-ils au format standard ?",
           answer:
-            "Oui, le papier aluminium (60 m), le film alimentaire (100 m) et le papier cuisson (40 m) sont aux formats standards utilisés dans toutes les cuisines.",
+            "Oui, le papier aluminium (60 m), le film alimentaire (100 m) et le papier cuisson (20 m) sont aux formats standards utilisés dans toutes les cuisines.",
         },
         {
           question: "Puis-je commander ce pack plusieurs fois ?",
