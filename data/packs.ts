@@ -36,7 +36,7 @@ export const packs: Pack[] = [
         name: "Papier cuisson 20 mètres",
         icon: "parchment",
         image:
-          "https://res.cloudinary.com/diptsoc4h/image/upload/v1786178466/Design_sans_titre_91_vwiuap.png",
+          "https://res.cloudinary.com/diptsoc4h/image/upload/v1786381967/IMG_2799_gzj290.png",
         imageAlt: "Rouleau de papier cuisson sulfurisé 20 mètres Bayti Pack",
       },
       {
