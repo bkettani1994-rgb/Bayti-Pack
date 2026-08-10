@@ -6,7 +6,7 @@ export const packs: Pack[] = [
     name: "Pack Cuisine Essentielle",
     shortName: "Cuisine Essentielle",
     tagline: "1 Pack = 6 mois d'utilisation",
-    price: 169,
+    price: 179,
     compareAtPrice: 219,
     itemsCount: 5,
     thumbnail:

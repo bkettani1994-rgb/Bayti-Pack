@@ -202,13 +202,13 @@ export const fr: Dictionary = {
     home: {
       title: "Packs d'accessoires de cuisine indispensables au quotidien",
       description:
-        "Tous les indispensables de votre cuisine réunis dans un pack économique à 169 DH. Livraison rapide partout au Maroc, paiement à la livraison.",
-      ogDescription: "Gagnez du temps, économisez de l'argent et recevez tout chez vous. Découvrez notre pack cuisine à 169 DH.",
+        "Tous les indispensables de votre cuisine réunis dans un pack économique à 179 DH. Livraison rapide partout au Maroc, paiement à la livraison.",
+      ogDescription: "Gagnez du temps, économisez de l'argent et recevez tout chez vous. Découvrez notre pack cuisine à 179 DH.",
     },
     catalogue: {
       title: "Catalogue des packs cuisine",
       description:
-        "Découvrez le Pack Cuisine Essentielle : papier aluminium, film alimentaire, papier cuisson, sacs étirables à couvercle jetable et sacs poubelle bleus 30L. À 169 DH, livraison rapide.",
+        "Découvrez le Pack Cuisine Essentielle : papier aluminium, film alimentaire, papier cuisson, sacs étirables à couvercle jetable et sacs poubelle bleus 30L. À 179 DH, livraison rapide.",
     },
     contact: {
       title: "Contact",
