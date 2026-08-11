@@ -31,7 +31,7 @@ async function sendConversionEvent({
 
   const clientIp = request.headers.get("x-forwarded-for")?.split(",")[0]?.trim();
   const userAgent = request.headers.get("user-agent") ?? undefined;
-  const sourceUrl = request.headers.get("referer") ?? "https://www.baytipack.ma";
+  const sourceUrl = request.headers.get("referer") ?? "https://www.baytipack.shop";
 
   const payload = {
     data: [

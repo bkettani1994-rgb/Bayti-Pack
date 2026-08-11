@@ -51,7 +51,7 @@ export default function ProductPage({ params }: { params: { locale: string; slug
       priceCurrency: "MAD",
       price: pack.price,
       availability: "https://schema.org/InStock",
-      url: `https://www.baytipack.ma${localizedHref(`/packs/${pack.slug}`, locale)}`,
+      url: `https://www.baytipack.shop${localizedHref(`/packs/${pack.slug}`, locale)}`,
     },
   };
 

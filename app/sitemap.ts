@@ -1,7 +1,7 @@
 import type { MetadataRoute } from "next";
 import { visiblePacks } from "@/data/packs";
 
-const siteUrl = "https://www.baytipack.ma";
+const siteUrl = "https://www.baytipack.shop";
 
 const staticPaths = [
   "",

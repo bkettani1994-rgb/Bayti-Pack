@@ -22,7 +22,7 @@ const cairo = Cairo({
   display: "swap",
 });
 
-const siteUrl = "https://www.baytipack.ma";
+const siteUrl = "https://www.baytipack.shop";
 
 export function generateStaticParams() {
   return locales.map((locale) => ({ locale }));
@@ -64,6 +64,11 @@ export function generateMetadata({ params }: { params: { locale: string } }): Me
     robots: {
       index: true,
       follow: true,
+    },
+    verification: {
+      other: {
+        "facebook-domain-verification": "ub1ho25pfs9pt4bjt9i5u894tydyv0",
+      },
     },
   };
 }

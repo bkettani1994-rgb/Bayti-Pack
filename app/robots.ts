@@ -7,6 +7,6 @@ export default function robots(): MetadataRoute.Robots {
       allow: "/",
       disallow: "/api/",
     },
-    sitemap: "https://www.baytipack.ma/sitemap.xml",
+    sitemap: "https://www.baytipack.shop/sitemap.xml",
   };
 }
