@@ -46,7 +46,7 @@ export default function Footer({ locale, dict }: { locale: Locale; dict: Diction
         <div>
           <h3 className="text-sm font-semibold text-white">{dict.footer.contactHeading}</h3>
           <ul className="mt-4 space-y-3 text-sm text-white/85">
-            <li className="flex items-center gap-2"><Phone className="h-4 w-4 text-white" /> +212 6 00 00 00 00</li>
+            <li className="flex items-center gap-2"><Phone className="h-4 w-4 text-white" /> +212 6 06 50 10 59</li>
             <li className="flex items-center gap-2"><Mail className="h-4 w-4 text-white" /> contact@baytipack.ma</li>
             <li className="flex items-center gap-2"><MapPin className="h-4 w-4 text-white" /> {dict.contact.zoneValue}</li>
           </ul>

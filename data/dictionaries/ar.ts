@@ -11,6 +11,10 @@ export const ar: Dictionary = {
     "🏠 اشتروها مرة واحدة، وارتاحوا لفترة طويلة",
     "🔥 الباقة الذكية لمطبخ جاهز دائماً!",
   ],
+  whatsappButton: {
+    ariaLabel: "تواصلوا معنا عبر واتساب",
+    message: "مرحباً، لدي سؤال حول Bayti Pack.",
+  },
   nav: {
     home: "الرئيسية",
     packs: "باقاتنا",

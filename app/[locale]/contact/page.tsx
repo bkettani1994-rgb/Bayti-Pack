@@ -23,7 +23,7 @@ export default function ContactPage({ params }: { params: { locale: string } }) 
   const dict = getDictionary(locale);
 
   const infos = [
-    { icon: Phone, label: dict.contact.phoneLabel, value: "+212 6 00 00 00 00" },
+    { icon: Phone, label: dict.contact.phoneLabel, value: "+212 6 06 50 10 59" },
     { icon: Mail, label: dict.contact.emailLabel, value: "contact@baytipack.ma" },
     { icon: MapPin, label: dict.contact.zoneLabel, value: dict.contact.zoneValue },
     { icon: Clock, label: dict.contact.availabilityLabel, value: dict.contact.availabilityValue },

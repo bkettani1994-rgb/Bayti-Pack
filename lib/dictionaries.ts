@@ -2,6 +2,7 @@ import type { Locale } from "@/lib/i18n";
 
 export type Dictionary = {
   announcement: string[];
+  whatsappButton: { ariaLabel: string; message: string };
   nav: {
     home: string;
     packs: string;

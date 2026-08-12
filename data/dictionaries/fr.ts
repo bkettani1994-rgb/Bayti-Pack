@@ -11,6 +11,10 @@ export const fr: Dictionary = {
     "🏠 Acheté 1 fois, tranquille pour longtemps",
     "🔥 Le pack malin pour une cuisine toujours prête !",
   ],
+  whatsappButton: {
+    ariaLabel: "Contactez-nous sur WhatsApp",
+    message: "Bonjour, j'ai une question sur Bayti Pack.",
+  },
   nav: {
     home: "Accueil",
     packs: "Nos Packs",

@@ -6,6 +6,7 @@ import AnnouncementBar from "@/components/layout/AnnouncementBar";
 import Header from "@/components/layout/Header";
 import Footer from "@/components/layout/Footer";
 import MetaPixel from "@/components/shared/MetaPixel";
+import WhatsAppButton from "@/components/shared/WhatsAppButton";
 import { locales, isLocale, type Locale } from "@/lib/i18n";
 import { getDictionary } from "@/lib/dictionaries";
 import { cn } from "@/lib/utils";
@@ -92,6 +93,7 @@ export default function LocaleLayout({
         <Header locale={locale} dict={dict} />
         <main className="flex-1">{children}</main>
         <Footer locale={locale} dict={dict} />
+        <WhatsAppButton whatsappButton={dict.whatsappButton} />
       </body>
     </html>
   );
