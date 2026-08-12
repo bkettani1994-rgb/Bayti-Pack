@@ -71,6 +71,10 @@ export function generateMetadata({ params }: { params: { locale: string } }): Me
         "facebook-domain-verification": "ub1ho25pfs9pt4bjt9i5u894tydyv0",
       },
     },
+    icons: {
+      icon: "https://res.cloudinary.com/diptsoc4h/image/upload/v1786539879/bayti_pack_logo_white_wis5ud.png",
+      apple: "https://res.cloudinary.com/diptsoc4h/image/upload/v1786539879/bayti_pack_logo_white_wis5ud.png",
+    },
   };
 }
 
