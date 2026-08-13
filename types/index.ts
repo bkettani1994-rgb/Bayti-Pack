@@ -24,6 +24,7 @@ export type PackItem = {
   icon: IconKey;
   image?: string;
   imageAlt?: string;
+  description?: string;
 };
 
 export type Advantage = {

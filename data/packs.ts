@@ -24,6 +24,7 @@ export const packs: Pack[] = [
         image:
           "https://res.cloudinary.com/diptsoc4h/image/upload/v1786178466/Design_sans_titre_92_zjjz83.png",
         imageAlt: "Rouleau de papier aluminium alimentaire 60 mètres Bayti Pack",
+        description: "Idéal pour cuire, griller et conserver vos aliments au frais plus longtemps.",
       },
       {
         name: "Film alimentaire 100 mètres",
@@ -31,6 +32,7 @@ export const packs: Pack[] = [
         image:
           "https://res.cloudinary.com/diptsoc4h/image/upload/v1786178467/Gemini_Generated_Image_dx26ubdx26ubdx26_vh2zmr.png",
         imageAlt: "Rouleau de film alimentaire étirable 100 mètres Bayti Pack",
+        description: "Protège vos plats et restes de la contamination et de l'air pour une fraîcheur optimale.",
       },
       {
         name: "Papier cuisson 20 mètres",
@@ -38,6 +40,7 @@ export const packs: Pack[] = [
         image:
           "https://res.cloudinary.com/diptsoc4h/image/upload/v1786381967/IMG_2799_gzj290.png",
         imageAlt: "Rouleau de papier cuisson sulfurisé 20 mètres Bayti Pack",
+        description: "Antiadhésif et résistant à la chaleur, parfait pour la pâtisserie et la cuisson au four.",
       },
       {
         name: "Sac étirable couvercle jetable x100",
@@ -45,6 +48,7 @@ export const packs: Pack[] = [
         image:
           "https://res.cloudinary.com/diptsoc4h/image/upload/v1786182518/Design_sans_titre_93_eugcei.png",
         imageAlt: "Sacs étirables à couvercle jetable x100 Bayti Pack",
+        description: "S'adapte à tous types de récipients pour fermer et conserver vos plats en un clin d'œil.",
       },
       {
         name: "Sacs poubelle bleus 30L x40",
@@ -52,6 +56,7 @@ export const packs: Pack[] = [
         image:
           "https://res.cloudinary.com/diptsoc4h/image/upload/v1786304320/ChatGPT_Image_9_ao%C3%BBt_2026_20_35_45_haeg3q.webp",
         imageAlt: "Sacs poubelle bleus 30 litres x40 Bayti Pack",
+        description: "Format pratique pour un usage quotidien, résistants et fiables pour toute la maison.",
       },
     ],
     advantages: [

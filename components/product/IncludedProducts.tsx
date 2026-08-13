@@ -9,26 +9,31 @@ export default function IncludedProducts({ pack, heading }: { pack: Pack; headin
       <Reveal>
         <h2 className="text-2xl font-bold text-ink sm:text-3xl">{heading}</h2>
       </Reveal>
-      <div className="mt-8 grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
+      <div className="mt-8 grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
         {pack.contents.map((item, i) => (
           <Reveal key={item.name} delay={i * 0.05}>
-            <div className="flex items-center gap-4 rounded-xl2 border border-black/5 bg-white p-5 shadow-soft">
+            <div className="overflow-hidden rounded-xl2 border border-black/5 bg-white shadow-soft">
               {item.image ? (
-                <div className="relative h-12 w-12 flex-shrink-0 overflow-hidden rounded-full bg-brand-light">
+                <div className="relative aspect-square w-full bg-brand-light">
                   <Image
                     src={item.image}
                     alt={item.imageAlt ?? `${item.name} — ${pack.name} — Bayti Pack`}
                     fill
-                    sizes="48px"
+                    sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
                     className="object-cover"
                   />
                 </div>
               ) : (
-                <div className="flex h-12 w-12 flex-shrink-0 items-center justify-center rounded-full bg-brand-light">
-                  <AppIcon icon={item.icon} className="h-6 w-6 text-brand-dark" />
+                <div className="flex aspect-square w-full items-center justify-center bg-brand-light">
+                  <AppIcon icon={item.icon} className="h-14 w-14 text-brand-dark" />
                 </div>
               )}
-              <p className="font-medium text-ink">{item.name}</p>
+              <div className="p-5">
+                <p className="font-semibold text-ink">{item.name}</p>
+                {item.description && (
+                  <p className="mt-1.5 text-sm leading-relaxed text-neutral-500">{item.description}</p>
+                )}
+              </div>
             </div>
           </Reveal>
         ))}

@@ -30,6 +30,7 @@ export function localizePack(pack: Pack, locale: Locale): Pack {
       ...item,
       name: t.contents[i]?.name ?? item.name,
       imageAlt: t.contents[i]?.imageAlt ?? item.imageAlt,
+      description: t.contents[i]?.description ?? item.description,
     })),
     advantages: pack.advantages.map((adv, i) => ({
       ...adv,

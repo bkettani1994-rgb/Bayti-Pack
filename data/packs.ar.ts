@@ -4,7 +4,7 @@ export type ArPackContent = {
   tagline: string;
   description: string;
   imageAlt?: string;
-  contents: { name: string; imageAlt?: string }[];
+  contents: { name: string; imageAlt?: string; description?: string }[];
   advantages: { title: string; description: string }[];
 };
 
@@ -18,16 +18,30 @@ export const arPackContent: Record<string, ArPackContent> = {
     imageAlt:
       "باقة المطبخ الأساسية من Bayti Pack كاملة مع ورق الألومنيوم والفيلم الغذائي وورق الخبز وأكياس الغطاء المطاطية وأكياس القمامة الزرقاء 30 لتر",
     contents: [
-      { name: "ورق ألومنيوم 60 متر", imageAlt: "لفافة ورق الألومنيوم الغذائي 60 متر Bayti Pack" },
-      { name: "فيلم غذائي 100 متر", imageAlt: "لفافة الفيلم الغذائي المطاطي 100 متر Bayti Pack" },
-      { name: "ورق خبز 20 متر", imageAlt: "لفافة ورق الخبز 20 متر Bayti Pack" },
+      {
+        name: "ورق ألومنيوم 60 متر",
+        imageAlt: "لفافة ورق الألومنيوم الغذائي 60 متر Bayti Pack",
+        description: "مثالي للطهي والشوي وحفظ أطعمتكم طازجة لفترة أطول.",
+      },
+      {
+        name: "فيلم غذائي 100 متر",
+        imageAlt: "لفافة الفيلم الغذائي المطاطي 100 متر Bayti Pack",
+        description: "يحمي أطباقكم وبقايا الطعام من التلوث والهواء للحفاظ على النضارة.",
+      },
+      {
+        name: "ورق خبز 20 متر",
+        imageAlt: "لفافة ورق الخبز 20 متر Bayti Pack",
+        description: "غير لاصق ومقاوم للحرارة، مثالي للحلويات والطهي في الفرن.",
+      },
       {
         name: "أكياس غطاء مطاطية قابلة للاستعمال مرة واحدة × 100",
         imageAlt: "أكياس الغطاء المطاطية القابلة للاستعمال مرة واحدة × 100 Bayti Pack",
+        description: "تتكيف مع جميع أنواع الأواني لإغلاق وحفظ أطباقكم بسرعة.",
       },
       {
         name: "أكياس قمامة زرقاء 30 لتر × 40",
         imageAlt: "أكياس قمامة زرقاء 30 لتر × 40 Bayti Pack",
+        description: "حجم عملي للاستخدام اليومي، متينة وموثوقة لكامل المنزل.",
       },
     ],
     advantages: [
