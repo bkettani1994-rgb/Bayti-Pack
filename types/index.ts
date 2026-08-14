@@ -25,6 +25,7 @@ export type PackItem = {
   image?: string;
   imageAlt?: string;
   description?: string;
+  cardImage?: string;
 };
 
 export type Advantage = {
